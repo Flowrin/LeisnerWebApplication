@@ -18,6 +18,11 @@ namespace LeisnerWebApp
             
         }
 
+        protected void LoginButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("DailyInfo.aspx");
+        }
+
      
 
     }
