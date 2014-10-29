@@ -16,17 +16,21 @@
         .auto-style4 {
             width: 353px;
         }
-    </style>
+        .auto-style5 {
+            height: 14px;
+        }
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
     
         <h1 style="height: 153px; width: 705px">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <img alt="" class="auto-style2" src="Images/imagegen.jpg" /></h1>
     
     </div>
-        <h2>Login </h2>
+        <h2>Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sign Up</h2>
         <table style="width: 100%; height: 208px;">
             <tr>
                 <td class="auto-style3">
@@ -47,7 +51,7 @@
                                                 <td>
                                                     <asp:TextBox ID="UserName" runat="server" Font-Size="0.8em"></asp:TextBox>
                                                     <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" ErrorMessage="User Name is required." ToolTip="User Name is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
-                                                </td>
+                                                    (Email)</td>
                                             </tr>
                                             <tr>
                                                 <td align="right">
@@ -84,14 +88,14 @@
                     </asp:Login>
                 </td>
                 <td class="auto-style4">
-                    <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" Width="388px">
+                    <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" Height="258px" Width="353px">
                         <ContinueButtonStyle BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="#284E98" />
                         <CreateUserButtonStyle BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="#284E98" />
                         <TitleTextStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                         <WizardSteps>
                             <asp:CreateUserWizardStep runat="server">
                                 <ContentTemplate>
-                                    <table style="font-family:Verdana;font-size:100%;width:388px;">
+                                    <table style="font-family:Verdana;font-size:100%;height:258px;width:353px;">
                                         <tr>
                                             <td align="center" colspan="2" style="color:White;background-color:#507CD1;font-weight:bold;">Sign Up for Your New Account</td>
                                         </tr>
@@ -102,6 +106,12 @@
                                             <td>
                                                 <asp:TextBox ID="UserName" runat="server"></asp:TextBox>
                                                 <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" ErrorMessage="User Name is required." ToolTip="User Name is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right">Address</td>
+                                            <td>
+                                                <asp:TextBox ID="Address" runat="server"></asp:TextBox>
                                             </td>
                                         </tr>
                                         <tr>
@@ -132,8 +142,26 @@
                                             </td>
                                         </tr>
                                         <tr>
+                                            <td align="right">Doctor</td>
+                                            <td>
+                                                <asp:TextBox ID="Doctor" runat="server"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right" class="auto-style5">Child&#39;s Name</td>
+                                            <td class="auto-style5">
+                                                <asp:TextBox ID="ChildName" runat="server"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right">Child&#39;s Date of Birth</td>
+                                            <td>
+                                                <asp:TextBox ID="ChildDoB" runat="server"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr>
                                             <td align="right">
-                                                <asp:Label ID="Doctor" runat="server" AssociatedControlID="Doctor">Security Question:</asp:Label>
+                                                <asp:Label ID="QuestionLabel" runat="server" AssociatedControlID="Question">Security Question:</asp:Label>
                                             </td>
                                             <td>
                                                 <asp:TextBox ID="Question" runat="server"></asp:TextBox>

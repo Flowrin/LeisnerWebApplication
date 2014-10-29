@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DailyInfo.aspx" />
     <Content Include="FrontPage.aspx" />
     <Content Include="Images\imagegen.jpg" />
     <Content Include="Web.config" />
@@ -67,6 +68,13 @@
     <Compile Include="Classes\Time.cs" />
     <Content Include="Classes\PeePee.cs" />
     <Compile Include="Classes\Person.cs" />
+    <Compile Include="DailyInfo.aspx.cs">
+      <DependentUpon>DailyInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DailyInfo.aspx.designer.cs">
+      <DependentUpon>DailyInfo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FrontPage.aspx.cs">
       <DependentUpon>FrontPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
