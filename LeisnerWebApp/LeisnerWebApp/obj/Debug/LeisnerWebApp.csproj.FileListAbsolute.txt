@@ -8,3 +8,8 @@ C:\Users\Sebi\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp
 C:\Users\Sebi\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.csprojResolveAssemblyReference.cache
 C:\Users\Sebi\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.dll
 C:\Users\Sebi\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.pdb
+C:\Users\Valentina\Documents\visual studio 2012\Projects\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\bin\LeisnerWebApp.dll
+C:\Users\Valentina\Documents\visual studio 2012\Projects\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\bin\LeisnerWebApp.pdb
+C:\Users\Valentina\Documents\visual studio 2012\Projects\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.csprojResolveAssemblyReference.cache
+C:\Users\Valentina\Documents\visual studio 2012\Projects\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.dll
+C:\Users\Valentina\Documents\visual studio 2012\Projects\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.pdb
