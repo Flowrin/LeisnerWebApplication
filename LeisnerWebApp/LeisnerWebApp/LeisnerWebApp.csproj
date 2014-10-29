@@ -57,22 +57,23 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FrontPage.aspx" />
+    <Content Include="Images\imagegen.jpg" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\Week.cs" />
-    <Content Include="App_Code\Day.cs" />
-    <Content Include="App_Code\Time.cs" />
-    <Content Include="App_Code\PeePee.cs" />
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Content Include="Classes\Week.cs" />
+    <Compile Include="Classes\Day.cs" />
+    <Compile Include="Classes\Time.cs" />
+    <Content Include="Classes\PeePee.cs" />
+    <Compile Include="Classes\Person.cs" />
+    <Compile Include="FrontPage.aspx.cs">
+      <DependentUpon>FrontPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="FrontPage.aspx.designer.cs">
+      <DependentUpon>FrontPage.aspx</DependentUpon>
     </Compile>
-    <Content Include="App_Code\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
