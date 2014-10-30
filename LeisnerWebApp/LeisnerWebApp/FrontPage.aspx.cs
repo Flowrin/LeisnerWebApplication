@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using LeisnerWebApp.App_Code;
+using LeisnerWebApp.refLeisnerWebService;
 
 namespace LeisnerWebApp
 {

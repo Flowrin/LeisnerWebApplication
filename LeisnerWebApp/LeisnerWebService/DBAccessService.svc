@@ -1,1 +1,1 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="LeisnerWebService.Service1" CodeBehind="DBAccessService.svc.cs" %>
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="LeisnerWebService.DBAccessService" CodeBehind="DBAccessService.svc.cs" %>

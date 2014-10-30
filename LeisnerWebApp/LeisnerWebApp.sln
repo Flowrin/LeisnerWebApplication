@@ -2,6 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeisnerWebApp", "LeisnerWebApp\LeisnerWebApp.csproj", "{080E2582-C728-4CF3-A7D1-E05A9EEED240}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5DA3034E-481A-4CFC-BB15-A7D4C527FA41} = {5DA3034E-481A-4CFC-BB15-A7D4C527FA41}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeisnerWebService", "LeisnerWebService\LeisnerWebService.csproj", "{5DA3034E-481A-4CFC-BB15-A7D4C527FA41}"
 EndProject

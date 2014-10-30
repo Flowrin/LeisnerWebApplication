@@ -15,47 +15,151 @@ namespace LeisnerWebService
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
-    public class Service1 : IDBAccessService
+    public class DBAccessService : IDBAccessService
     {
         private const string CONNECTION_STRING = @"Data Source=ealdb1.eal.local;Initial Catalog=EJL12_DB;Persist Security Info=True;User ID=ejl12_usr;Password=Baz1nga12";
-        Person myPerson ;
-        public void Find()
+        Person myPerson;
+        Time myTime;
+        public void FindPerson()
         {
             SqlConnection con = new SqlConnection(CONNECTION_STRING);
             SqlCommand cmd = new SqlCommand();
-            
+
             cmd.Connection = con;
 
-            cmd.CommandText = "Select * From " + "Person"+ " Where PersonID = @PersonID";
+            cmd.CommandText = "Select * From " + "Person" + " Where PersonID = @PersonID";
 
             SqlParameter par = new SqlParameter("@ItemNo", SqlDbType.Int);
             par.Value = myPerson.PersonId;
             cmd.Parameters.Add(par);
-
+            myPerson = new Person();
             con.Open();
             SqlDataReader datareader = cmd.ExecuteReader();
             datareader.Read();
 
-            //this.Description = (string)datareader["Description"];
-            //this.Price = (double)datareader["Price"];
-            //this.ItemsInStock = (int)datareader["ItemsInStock"];
-            //this.Version = (int)datareader["Version"];
-
+            myPerson.Address = (string)datareader["Address"];
+            myPerson.ChildName = (string)datareader["ChildsName"];
+            myPerson.DateOfBirth = (string)datareader["DateOfBirth"];
+            myPerson.Doctor = (string)datareader["Doctor"];
+            myPerson.Email = (string)datareader["Email"];
+            myPerson.Name = (string)datareader["Name"];
+            myPerson.Password = (string)datareader["Password"];
+            myPerson.PersonId = (int)datareader["PersonID"];
+            myPerson.Status = (int)datareader["Status"];
             con.Close();
         }
 
-
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public List<Person> FindAllPersons()
         {
-            if (composite == null)
+            List<Person> myPersonList = new List<Person>();
+            Person myPerson = new Person();
+
+            SqlConnection con = new SqlConnection(CONNECTION_STRING);
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+
+            cmd.CommandText = "Select * From " + "Person";
+
+            con.Open();
+            SqlDataReader datareader = cmd.ExecuteReader();
+
+            while (datareader.Read())
             {
-                throw new ArgumentNullException("composite");
+                myPerson = new Person();
+                myPerson.Address = (string)datareader["Address"];
+                myPerson.ChildName = (string)datareader["ChildsName"];
+                myPerson.DateOfBirth = (string)datareader["DateOfBirth"];
+                myPerson.Doctor = (string)datareader["Doctor"];
+                myPerson.Email = (string)datareader["Email"];
+                myPerson.Name = (string)datareader["Name"];
+                myPerson.Password = (string)datareader["Password"];
+                myPerson.PersonId = (int)datareader["PersonID"];
+                myPerson.Status = (int)datareader["Status"];
+                myPersonList.Add(myPerson);
             }
-            if (composite.BoolValue)
+
+            con.Close();
+
+            return myPersonList;
+        }
+        public void FindTime()
+        {
+            SqlConnection con = new SqlConnection(CONNECTION_STRING);
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = con;
+
+            cmd.CommandText = "Select * From " + "Time" + " Where HourID = @HourID";
+
+            SqlParameter par = new SqlParameter("@HourID", SqlDbType.Int);
+            par.Value = myTime.HourId;
+            cmd.Parameters.Add(par);
+            myTime = new Time();
+            con.Open();
+            SqlDataReader datareader = cmd.ExecuteReader();
+            datareader.Read();
+
+            myTime.HourId = (int)datareader["HourID"];
+            myTime.Hour = (string)datareader["Hour"];
+            con.Close();
+        }
+        public List<Time> FindAllTimes()
+        {
+            List<Time> myTimeList = new List<Time>();
+            Time myTime = new Time();
+
+            SqlConnection con = new SqlConnection(CONNECTION_STRING);
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+
+            cmd.CommandText = "Select * From " + "Time";
+
+            con.Open();
+            SqlDataReader datareader = cmd.ExecuteReader();
+
+            while (datareader.Read())
             {
-                composite.StringValue += "Suffix";
+                myTime.HourId = (int)datareader["HourID"];
+                myTime.Hour = (string)datareader["Hour"];
+                myTimeList.Add(myTime);
             }
-            return composite;
+
+            con.Close();
+
+            return myTimeList;
+        }
+        public void SavePerson(int personId, int status, string email, string password, string name, string address, string childName, string doctor, string dateOfBirth)
+        {
+            SqlConnection con = new SqlConnection(CONNECTION_STRING);
+
+            string sqlstring = "Insert into Customer values name=@Name, address=@Address, doctor = @Doctor, childName = @ChildsName, dateOfBirth = @DateOfBirth, " +
+                              "email = @Email, password = @Password,status=@Status";
+            SqlCommand cmd = new SqlCommand(sqlstring, con);
+            cmd.Parameters.AddWithValue("@Name", name);
+            cmd.Parameters.AddWithValue("@customerAddress", address);
+            cmd.Parameters.AddWithValue("@doctor", doctor);
+            cmd.Parameters.AddWithValue("@childsName", childName);
+            cmd.Parameters.AddWithValue("@dateOfBirth", dateOfBirth);
+            cmd.Parameters.AddWithValue("@customerLogin", email);
+            cmd.Parameters.AddWithValue("@customerPassword", password);
+            cmd.Parameters.AddWithValue("@status", status);
+
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
         }
     }
 }

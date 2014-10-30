@@ -1,0 +1,5 @@
+C:\Users\Sebi\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.csprojResolveAssemblyReference.cache
+C:\Users\Sebi\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\bin\LeisnerWebService.dll
+C:\Users\Sebi\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\bin\LeisnerWebService.pdb
+C:\Users\Sebi\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.dll
+C:\Users\Sebi\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.pdb

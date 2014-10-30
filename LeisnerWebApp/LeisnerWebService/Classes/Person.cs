@@ -19,17 +19,17 @@ namespace LeisnerWebApp.App_Code
       
 
 
-        public Person(int personId, int status, string email, string password, string name, string address, string childName, string doctor, string dateOfBirth)
+        public Person()
         {
-            this.personId = personId;
-            this.status = 0;
-            this.email = email;
-            this.password = password;
-            this.name = name;
-            this.address = address;
-            this.childName = childName;
-            this.doctor = doctor;
-            this.dateOfBirth = dateOfBirth;
+            //this.personId = personId;
+            //this.status = 0;
+            //this.email = email;
+            //this.password = password;
+            //this.name = name;
+            //this.address = address;
+            //this.childName = childName;
+            //this.doctor = doctor;
+            //this.dateOfBirth = dateOfBirth;
         }
 
 
