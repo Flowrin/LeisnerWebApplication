@@ -88,7 +88,7 @@
                     </asp:Login>
                 </td>
                 <td class="auto-style4">
-                    <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" Height="258px" Width="353px">
+                    <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" Height="258px" Width="353px" OnCreatedUser="CreateUserWizard1_CreatedUser">
                         <ContinueButtonStyle BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="#284E98" />
                         <CreateUserButtonStyle BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="#284E98" />
                         <TitleTextStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -104,7 +104,7 @@
                                                 <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">Name:</asp:Label>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="UserName" runat="server"> </asp:TextBox>
                                                 <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" ErrorMessage="User Name is required." ToolTip="User Name is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
                                             </td>
                                         </tr>

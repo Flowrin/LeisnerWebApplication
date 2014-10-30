@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LeisnerWebApp.refLeisnerWebService {
+namespace LeisnerWebApp.ServiceReference1 {
     using System.Runtime.Serialization;
     using System;
     
@@ -248,7 +248,7 @@ namespace LeisnerWebApp.refLeisnerWebService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="refLeisnerWebService.IDBAccessService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IDBAccessService")]
     public interface IDBAccessService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/FindPerson", ReplyAction="http://tempuri.org/IDBAccessService/FindPersonResponse")]
@@ -258,10 +258,10 @@ namespace LeisnerWebApp.refLeisnerWebService {
         System.Threading.Tasks.Task FindPersonAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/FindAllPersons", ReplyAction="http://tempuri.org/IDBAccessService/FindAllPersonsResponse")]
-        LeisnerWebApp.refLeisnerWebService.Person[] FindAllPersons();
+        LeisnerWebApp.ServiceReference1.Person[] FindAllPersons();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/FindAllPersons", ReplyAction="http://tempuri.org/IDBAccessService/FindAllPersonsResponse")]
-        System.Threading.Tasks.Task<LeisnerWebApp.refLeisnerWebService.Person[]> FindAllPersonsAsync();
+        System.Threading.Tasks.Task<LeisnerWebApp.ServiceReference1.Person[]> FindAllPersonsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/FindTime", ReplyAction="http://tempuri.org/IDBAccessService/FindTimeResponse")]
         void FindTime();
@@ -270,25 +270,25 @@ namespace LeisnerWebApp.refLeisnerWebService {
         System.Threading.Tasks.Task FindTimeAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/FindAllTimes", ReplyAction="http://tempuri.org/IDBAccessService/FindAllTimesResponse")]
-        LeisnerWebApp.refLeisnerWebService.Time[] FindAllTimes();
+        LeisnerWebApp.ServiceReference1.Time[] FindAllTimes();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/FindAllTimes", ReplyAction="http://tempuri.org/IDBAccessService/FindAllTimesResponse")]
-        System.Threading.Tasks.Task<LeisnerWebApp.refLeisnerWebService.Time[]> FindAllTimesAsync();
+        System.Threading.Tasks.Task<LeisnerWebApp.ServiceReference1.Time[]> FindAllTimesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/SavePerson", ReplyAction="http://tempuri.org/IDBAccessService/SavePersonResponse")]
-        void SavePerson(int personId, int status, string email, string password, string name, string address, string childName, string doctor, string dateOfBirth);
+        void SavePerson(int status, string email, string password, string name, string address, string childName, string doctor, string dateOfBirth);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/SavePerson", ReplyAction="http://tempuri.org/IDBAccessService/SavePersonResponse")]
-        System.Threading.Tasks.Task SavePersonAsync(int personId, int status, string email, string password, string name, string address, string childName, string doctor, string dateOfBirth);
+        System.Threading.Tasks.Task SavePersonAsync(int status, string email, string password, string name, string address, string childName, string doctor, string dateOfBirth);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IDBAccessServiceChannel : LeisnerWebApp.refLeisnerWebService.IDBAccessService, System.ServiceModel.IClientChannel {
+    public interface IDBAccessServiceChannel : LeisnerWebApp.ServiceReference1.IDBAccessService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class DBAccessServiceClient : System.ServiceModel.ClientBase<LeisnerWebApp.refLeisnerWebService.IDBAccessService>, LeisnerWebApp.refLeisnerWebService.IDBAccessService {
+    public partial class DBAccessServiceClient : System.ServiceModel.ClientBase<LeisnerWebApp.ServiceReference1.IDBAccessService>, LeisnerWebApp.ServiceReference1.IDBAccessService {
         
         public DBAccessServiceClient() {
         }
@@ -317,11 +317,11 @@ namespace LeisnerWebApp.refLeisnerWebService {
             return base.Channel.FindPersonAsync();
         }
         
-        public LeisnerWebApp.refLeisnerWebService.Person[] FindAllPersons() {
+        public LeisnerWebApp.ServiceReference1.Person[] FindAllPersons() {
             return base.Channel.FindAllPersons();
         }
         
-        public System.Threading.Tasks.Task<LeisnerWebApp.refLeisnerWebService.Person[]> FindAllPersonsAsync() {
+        public System.Threading.Tasks.Task<LeisnerWebApp.ServiceReference1.Person[]> FindAllPersonsAsync() {
             return base.Channel.FindAllPersonsAsync();
         }
         
@@ -333,20 +333,20 @@ namespace LeisnerWebApp.refLeisnerWebService {
             return base.Channel.FindTimeAsync();
         }
         
-        public LeisnerWebApp.refLeisnerWebService.Time[] FindAllTimes() {
+        public LeisnerWebApp.ServiceReference1.Time[] FindAllTimes() {
             return base.Channel.FindAllTimes();
         }
         
-        public System.Threading.Tasks.Task<LeisnerWebApp.refLeisnerWebService.Time[]> FindAllTimesAsync() {
+        public System.Threading.Tasks.Task<LeisnerWebApp.ServiceReference1.Time[]> FindAllTimesAsync() {
             return base.Channel.FindAllTimesAsync();
         }
         
-        public void SavePerson(int personId, int status, string email, string password, string name, string address, string childName, string doctor, string dateOfBirth) {
-            base.Channel.SavePerson(personId, status, email, password, name, address, childName, doctor, dateOfBirth);
+        public void SavePerson(int status, string email, string password, string name, string address, string childName, string doctor, string dateOfBirth) {
+            base.Channel.SavePerson(status, email, password, name, address, childName, doctor, dateOfBirth);
         }
         
-        public System.Threading.Tasks.Task SavePersonAsync(int personId, int status, string email, string password, string name, string address, string childName, string doctor, string dateOfBirth) {
-            return base.Channel.SavePersonAsync(personId, status, email, password, name, address, childName, doctor, dateOfBirth);
+        public System.Threading.Tasks.Task SavePersonAsync(int status, string email, string password, string name, string address, string childName, string doctor, string dateOfBirth) {
+            return base.Channel.SavePersonAsync(status, email, password, name, address, childName, doctor, dateOfBirth);
         }
     }
 }

@@ -48,7 +48,6 @@
   <xs:element name="SavePerson">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="personId" type="xs:int" />
         <xs:element minOccurs="0" name="status" type="xs:int" />
         <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />

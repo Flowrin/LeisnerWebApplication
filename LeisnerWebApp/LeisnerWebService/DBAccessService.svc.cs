@@ -29,7 +29,7 @@ namespace LeisnerWebService
 
             cmd.CommandText = "Select * From " + "Person" + " Where PersonID = @PersonID";
 
-            SqlParameter par = new SqlParameter("@ItemNo", SqlDbType.Int);
+            SqlParameter par = new SqlParameter("@PersonID", SqlDbType.Int);
             par.Value = myPerson.PersonId;
             cmd.Parameters.Add(par);
             myPerson = new Person();
@@ -128,21 +128,20 @@ namespace LeisnerWebService
 
             return myTimeList;
         }
-        public void SavePerson(int personId, int status, string email, string password, string name, string address, string childName, string doctor, string dateOfBirth)
+        public void SavePerson(int status, string email, string password, string name, string address, string childName, string doctor, string dateOfBirth)
         {
             SqlConnection con = new SqlConnection(CONNECTION_STRING);
 
-            string sqlstring = "Insert into Customer values name=@Name, address=@Address, doctor = @Doctor, childName = @ChildsName, dateOfBirth = @DateOfBirth, " +
-                              "email = @Email, password = @Password,status=@Status";
+            string sqlstring = ("Insert into Person (name, address, doctor, childName, dateOfBirth, email , password ,status)value(@Name, @Address, @Doctor, @ChildName,@DateOfBirth, @Email, @Password, @Status)");
             SqlCommand cmd = new SqlCommand(sqlstring, con);
             cmd.Parameters.AddWithValue("@Name", name);
-            cmd.Parameters.AddWithValue("@customerAddress", address);
-            cmd.Parameters.AddWithValue("@doctor", doctor);
-            cmd.Parameters.AddWithValue("@childsName", childName);
-            cmd.Parameters.AddWithValue("@dateOfBirth", dateOfBirth);
-            cmd.Parameters.AddWithValue("@customerLogin", email);
-            cmd.Parameters.AddWithValue("@customerPassword", password);
-            cmd.Parameters.AddWithValue("@status", status);
+            cmd.Parameters.AddWithValue("@Address", address);
+            cmd.Parameters.AddWithValue("@Doctor", doctor);
+            cmd.Parameters.AddWithValue("@ChildsName", childName);
+            cmd.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
+            cmd.Parameters.AddWithValue("@Email", email);
+            cmd.Parameters.AddWithValue("@Password", password);
+            cmd.Parameters.AddWithValue("@Status", status);
 
             try
             {

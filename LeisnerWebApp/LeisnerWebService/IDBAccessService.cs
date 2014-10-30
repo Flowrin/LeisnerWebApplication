@@ -23,7 +23,7 @@ namespace LeisnerWebService
         [OperationContract]
         List<Time> FindAllTimes();
         [OperationContract]
-        void SavePerson(int personId, int status, string email, string password, string name, string address, string childName, string doctor, string dateOfBirth);
+        void SavePerson(int status, string email, string password, string name, string address, string childName, string doctor, string dateOfBirth);
     }
 }
 

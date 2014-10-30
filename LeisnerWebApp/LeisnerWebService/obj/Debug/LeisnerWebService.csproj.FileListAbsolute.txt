@@ -3,3 +3,8 @@ C:\Users\Sebi\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebSer
 C:\Users\Sebi\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\bin\LeisnerWebService.pdb
 C:\Users\Sebi\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.dll
 C:\Users\Sebi\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.pdb
+C:\Users\Valentina\Documents\Visual Studio 2012\Projects\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\bin\LeisnerWebService.dll
+C:\Users\Valentina\Documents\Visual Studio 2012\Projects\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\bin\LeisnerWebService.pdb
+C:\Users\Valentina\Documents\Visual Studio 2012\Projects\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.dll
+C:\Users\Valentina\Documents\Visual Studio 2012\Projects\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.pdb
+C:\Users\Valentina\Documents\Visual Studio 2012\Projects\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.csprojResolveAssemblyReference.cache

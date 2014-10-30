@@ -4,12 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using LeisnerWebApp.refLeisnerWebService;
+using LeisnerWebApp.ServiceReference1;
 
 namespace LeisnerWebApp
 {
     public partial class FrontPage : System.Web.UI.Page
     {
+        DBAccessServiceClient dbAccess = new DBAccessServiceClient();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -23,8 +24,10 @@ namespace LeisnerWebApp
             Response.Redirect("DailyInfo.aspx");
         }
 
-     
-
+        protected void CreateUserWizard1_CreatedUser(object sender, EventArgs e)
+        {
+            dbAccess.SavePerson(0,"aaaa","aaa","sdsd","djdjd","sdsds","etrtrt","30.11.1993");
+        }
     }
 
 }
