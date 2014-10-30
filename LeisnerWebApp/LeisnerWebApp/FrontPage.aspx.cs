@@ -20,15 +20,17 @@ namespace LeisnerWebApp
         }
 
         protected void LoginButton_Click(object sender, EventArgs e)
-        {
-           
+        {Login login = new Login();
+            List<Person> personList = new List<Person>();
+            foreach(Person person in personList )
+                if(person.Email == login.UserName && person.Password == login.Password && person.Status ==0 )
             Response.Redirect("DailyInfo.aspx");
         }
 
         protected void CreateUserWizard1_CreatedUser(object sender, EventArgs e)
         {
             CreateUserWizard uw = new CreateUserWizard();
-            string name, childsName, doctor, address, dateOfBirth, password, email;
+            string name, childsName, doctor, address, dateOfBirth, password, email,question,answer;
             
             TextBox childNameTextBox =
     (TextBox)CreateUserWizard1.CreateUserStep.ContentTemplateContainer.FindControl("ChildName");
@@ -47,6 +49,8 @@ namespace LeisnerWebApp
             address = addressTextBox.Text;
             dateOfBirth = dateOfBirthTextBox.Text;
             dbAccess.SavePerson(0,email,password,name,address,childsName,doctor,dateOfBirth);
+            question = uw.Question;
+            answer = uw.Answer;
 
             Response.Redirect("FrontPage.aspx");
         }
