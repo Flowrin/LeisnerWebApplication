@@ -112,6 +112,7 @@
                                             <td align="right">Address</td>
                                             <td>
                                                 <asp:TextBox ID="Address" runat="server"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Address" ErrorMessage="Address is required." ToolTip="Address is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
                                             </td>
                                         </tr>
                                         <tr>
@@ -145,18 +146,21 @@
                                             <td align="right">Doctor</td>
                                             <td>
                                                 <asp:TextBox ID="Doctor" runat="server"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="Doctor" ErrorMessage="Docotor is required." ToolTip="Doctor is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td align="right" class="auto-style5">Child&#39;s Name</td>
                                             <td class="auto-style5">
                                                 <asp:TextBox ID="ChildName" runat="server"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="ChildName" ErrorMessage="Child's Name is required." ToolTip="Child's Name is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td align="right">Child&#39;s Date of Birth</td>
                                             <td>
                                                 <asp:TextBox ID="ChildDoB" runat="server"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ChildDoB" ErrorMessage="Date of Birth is required." ToolTip="Date of Birth is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
                                             </td>
                                         </tr>
                                         <tr>

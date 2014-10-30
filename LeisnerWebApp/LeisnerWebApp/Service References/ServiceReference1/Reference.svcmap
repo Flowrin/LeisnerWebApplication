@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f82a2c7c-466c-4d57-9ffd-5c022041318d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4b64385b-3a77-4492-8231-cc6bd0390254" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:27272/DBAccessService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="DBAccessService.xsd" MetadataType="Schema" ID="a5aac314-fb22-4295-81b6-5eb17267d040" SourceId="1" SourceUrl="http://localhost:27272/DBAccessService.svc?xsd=xsd2" />
-    <MetadataFile FileName="DBAccessService.disco" MetadataType="Disco" ID="1d762ff1-4567-4297-9d67-ab7054347e63" SourceId="1" SourceUrl="http://localhost:27272/DBAccessService.svc?disco" />
-    <MetadataFile FileName="DBAccessService1.xsd" MetadataType="Schema" ID="506e8dc8-2817-401b-8fc1-6f32eaf6b5c4" SourceId="1" SourceUrl="http://localhost:27272/DBAccessService.svc?xsd=xsd1" />
-    <MetadataFile FileName="DBAccessService.wsdl" MetadataType="Wsdl" ID="799ec8a9-a976-4496-aec8-3bba19211f88" SourceId="1" SourceUrl="http://localhost:27272/DBAccessService.svc?wsdl" />
-    <MetadataFile FileName="DBAccessService2.xsd" MetadataType="Schema" ID="a4ce052d-4133-4fad-8fc9-7e9ca962a10e" SourceId="1" SourceUrl="http://localhost:27272/DBAccessService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DBAccessService.xsd" MetadataType="Schema" ID="aa526d0f-bce1-48e8-9be2-d677b07228f1" SourceId="1" SourceUrl="http://localhost:27272/DBAccessService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DBAccessService.disco" MetadataType="Disco" ID="0d554279-0b77-465d-af7f-1499722e02b8" SourceId="1" SourceUrl="http://localhost:27272/DBAccessService.svc?disco" />
+    <MetadataFile FileName="DBAccessService1.xsd" MetadataType="Schema" ID="7cf2ea86-f288-4155-b3ad-a292c4de99cb" SourceId="1" SourceUrl="http://localhost:27272/DBAccessService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DBAccessService.wsdl" MetadataType="Wsdl" ID="7d4604d1-a93f-4caf-a392-1b10af18e1aa" SourceId="1" SourceUrl="http://localhost:27272/DBAccessService.svc?wsdl" />
+    <MetadataFile FileName="DBAccessService2.xsd" MetadataType="Schema" ID="af568157-1f7b-4452-8682-92a45ec1c4f0" SourceId="1" SourceUrl="http://localhost:27272/DBAccessService.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

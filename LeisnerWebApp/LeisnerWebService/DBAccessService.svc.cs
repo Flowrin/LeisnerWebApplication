@@ -128,20 +128,20 @@ namespace LeisnerWebService
 
             return myTimeList;
         }
-        public void SavePerson(int status, string email, string password, string name, string address, string childName, string doctor, string dateOfBirth)
+        public void SavePerson(int Status, string Email, string Password, string Name, string Address, string ChildsName, string Doctor, string DateOfBirth)
         {
             SqlConnection con = new SqlConnection(CONNECTION_STRING);
 
-            string sqlstring = ("Insert into Person ( status,  email,  password,  name,  address,  childName,  doctor,  dateOfBirth) values (@Status, @Email, @Password, @Name,@Address, @ChildsName, @Doctor, @DateOfBirth)");
+            string sqlstring = ("Insert into Person ( Status,  Email,  Password,  Name,  Address,  ChildsName,  Doctor,  DateOfBirth) values (@Status, @Email, @Password, @Name,@Address, @ChildsName, @Doctor, @DateOfBirth)");
             SqlCommand cmd = new SqlCommand(sqlstring, con);
-            cmd.Parameters.AddWithValue("@Name", name);
-            cmd.Parameters.AddWithValue("@Address", address);
-            cmd.Parameters.AddWithValue("@Doctor", doctor);
-            cmd.Parameters.AddWithValue("@ChildsName", childName);
-            cmd.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
-            cmd.Parameters.AddWithValue("@Email", email);
-            cmd.Parameters.AddWithValue("@Password", password);
-            cmd.Parameters.AddWithValue("@Status", status);
+            cmd.Parameters.AddWithValue("@Name", Name);
+            cmd.Parameters.AddWithValue("@Address", Address);
+            cmd.Parameters.AddWithValue("@Doctor", Doctor);
+            cmd.Parameters.AddWithValue("@ChildsName", ChildsName);
+            cmd.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
+            cmd.Parameters.AddWithValue("@Email", Email);
+            cmd.Parameters.AddWithValue("@Password", Password);
+            cmd.Parameters.AddWithValue("@Status", Status);
 
             try
             {
