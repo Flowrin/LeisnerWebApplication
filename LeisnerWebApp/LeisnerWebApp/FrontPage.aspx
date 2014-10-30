@@ -101,10 +101,10 @@
                                         </tr>
                                         <tr>
                                             <td align="right">
-                                                <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">User Name:</asp:Label>
+                                                <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">Name:</asp:Label>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="UserName" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
                                                 <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" ErrorMessage="User Name is required." ToolTip="User Name is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
                                             </td>
                                         </tr>
