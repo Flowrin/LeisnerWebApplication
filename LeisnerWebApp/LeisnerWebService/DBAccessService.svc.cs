@@ -132,7 +132,7 @@ namespace LeisnerWebService
         {
             SqlConnection con = new SqlConnection(CONNECTION_STRING);
 
-            string sqlstring = ("Insert into Person (name, address, doctor, childName, dateOfBirth, email , password ,status)value(@Name, @Address, @Doctor, @ChildName,@DateOfBirth, @Email, @Password, @Status)");
+            string sqlstring = ("Insert into Person ( status,  email,  password,  name,  address,  childName,  doctor,  dateOfBirth) values (@Status, @Email, @Password, @Name,@Address, @ChildsName, @Doctor, @DateOfBirth)");
             SqlCommand cmd = new SqlCommand(sqlstring, con);
             cmd.Parameters.AddWithValue("@Name", name);
             cmd.Parameters.AddWithValue("@Address", address);

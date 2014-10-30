@@ -21,12 +21,14 @@ namespace LeisnerWebApp
 
         protected void LoginButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("DailyInfo.aspx");
+           
+            dbAccess.SavePerson(0,"aaaa","aaa","sdsd","djdjd","sdsds","etrtrt","30.11.1993");
+            
         }
 
         protected void CreateUserWizard1_CreatedUser(object sender, EventArgs e)
         {
-            dbAccess.SavePerson(0,"aaaa","aaa","sdsd","djdjd","sdsds","etrtrt","30.11.1993");
+            
         }
     }
 
