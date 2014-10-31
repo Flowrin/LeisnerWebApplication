@@ -1,36 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LeisnerWebApp.App_Code" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LeisnerWebApp.App_Code" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="ArrayOfPerson">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Person" nillable="true" type="tns:Person" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfPerson" nillable="true" type="tns:ArrayOfPerson" />
-  <xs:complexType name="Person">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ChildName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="DateOfBirth" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Doctor" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="PersonId" type="xs:int" />
-      <xs:element minOccurs="0" name="Status" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Person" nillable="true" type="tns:Person" />
-  <xs:complexType name="ArrayOfTime">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Time" nillable="true" type="tns:Time" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfTime" nillable="true" type="tns:ArrayOfTime" />
-  <xs:complexType name="Time">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Hour" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="HourId" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Time" nillable="true" type="tns:Time" />
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8181/DBAccessService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LeisnerWebApp.App_Code" />
+  <xs:element name="FindPerson">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPersonResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAllPersons">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAllPersonsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/LeisnerWebApp.App_Code" minOccurs="0" name="FindAllPersonsResult" nillable="true" type="q1:ArrayOfPerson" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindTime">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindTimeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAllTimes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAllTimesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/LeisnerWebApp.App_Code" minOccurs="0" name="FindAllTimesResult" nillable="true" type="q2:ArrayOfTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePerson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Status" type="xs:int" />
+        <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ChildsName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Doctor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DateOfBirth" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePersonResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

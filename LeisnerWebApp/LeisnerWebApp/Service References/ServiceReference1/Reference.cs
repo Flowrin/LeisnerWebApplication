@@ -276,10 +276,10 @@ namespace LeisnerWebApp.ServiceReference1 {
         System.Threading.Tasks.Task<LeisnerWebApp.ServiceReference1.Time[]> FindAllTimesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/SavePerson", ReplyAction="http://tempuri.org/IDBAccessService/SavePersonResponse")]
-        void SavePerson(int status, string email, string password, string name, string address, string childName, string doctor, string dateOfBirth);
+        void SavePerson(int Status, string Email, string Password, string Name, string Address, string ChildsName, string Doctor, string DateOfBirth);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/SavePerson", ReplyAction="http://tempuri.org/IDBAccessService/SavePersonResponse")]
-        System.Threading.Tasks.Task SavePersonAsync(int status, string email, string password, string name, string address, string childName, string doctor, string dateOfBirth);
+        System.Threading.Tasks.Task SavePersonAsync(int Status, string Email, string Password, string Name, string Address, string ChildsName, string Doctor, string DateOfBirth);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -341,12 +341,12 @@ namespace LeisnerWebApp.ServiceReference1 {
             return base.Channel.FindAllTimesAsync();
         }
         
-        public void SavePerson(int status, string email, string password, string name, string address, string childName, string doctor, string dateOfBirth) {
-            base.Channel.SavePerson(status, email, password, name, address, childName, doctor, dateOfBirth);
+        public void SavePerson(int Status, string Email, string Password, string Name, string Address, string ChildsName, string Doctor, string DateOfBirth) {
+            base.Channel.SavePerson(Status, Email, Password, Name, Address, ChildsName, Doctor, DateOfBirth);
         }
         
-        public System.Threading.Tasks.Task SavePersonAsync(int status, string email, string password, string name, string address, string childName, string doctor, string dateOfBirth) {
-            return base.Channel.SavePersonAsync(status, email, password, name, address, childName, doctor, dateOfBirth);
+        public System.Threading.Tasks.Task SavePersonAsync(int Status, string Email, string Password, string Name, string Address, string ChildsName, string Doctor, string DateOfBirth) {
+            return base.Channel.SavePersonAsync(Status, Email, Password, Name, Address, ChildsName, Doctor, DateOfBirth);
         }
     }
 }

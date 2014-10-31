@@ -14,16 +14,16 @@ namespace LeisnerWebService
     {
 
         [OperationContract]
-     void  FindPerson();
+        void  FindPerson();
 
         [OperationContract]
-      List<Person> FindAllPersons();
+        List<Person> FindAllPersons();
         [OperationContract]
         void FindTime();
         [OperationContract]
         List<Time> FindAllTimes();
         [OperationContract]
-        void SavePerson(int status, string email, string password, string name, string address, string childName, string doctor, string dateOfBirth);
+        void SavePerson(int Status, string Email, string Password, string Name, string Address, string ChildsName, string Doctor, string DateOfBirth);
     }
 }
 
