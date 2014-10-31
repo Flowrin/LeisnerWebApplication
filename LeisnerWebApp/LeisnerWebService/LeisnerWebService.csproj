@@ -64,10 +64,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Day.cs" />
-    <Content Include="Classes\PeePee.cs" />
+    <Compile Include="Classes\PeePee.cs" />
     <Compile Include="Classes\Person.cs" />
     <Compile Include="Classes\Time.cs" />
-    <Content Include="Classes\Week.cs" />
+    <Compile Include="Classes\Week.cs" />
     <Compile Include="DBAccessService.svc.cs">
       <DependentUpon>DBAccessService.svc</DependentUpon>
     </Compile>
