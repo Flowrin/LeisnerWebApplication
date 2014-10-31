@@ -58,12 +58,13 @@
     <form id="form1" runat="server">
     <div>
     
-        <h1 style="height: 153px; width: 705px">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <img alt="" class="auto-style2" src="Images/imagegen.jpg" /></h1>
+        <h1 style="height: 153px; width: 705px">   
+            <a href="http://leisner.dk/"><img alt="" class="auto-style2" src="Images/imagegen.jpg" />
+            
+        </h1>
     
     </div>
-        <h2>Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h2>
+        <h2>Login</h2>
         <table class="auto-style5">
             <tr>
                 <td class="auto-style3" colspan="2">
