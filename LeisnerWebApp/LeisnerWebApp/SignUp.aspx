@@ -1,94 +1,117 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="LeisnerWebApp.FrontPage2" %>
+﻿</body>
+</html>
+ <%@ Page Language="C#" AutoEventWireup="true"CodeBehind="SignUp.aspx.cs" Inherits="LeisnerWebApp.FrontPage2" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title></title>
     <style type="text/css">
         .auto-style1 {
             width: 420px;
             height: 168px;
         }
+        .auto-style2 {
+            font-weight: normal;
+            width: 1006px;
+            height: 105px;
+        }
+        .auto-style14 {
+            font-weight: normal;
+            width: 1006px;
+            height: 35px;
+        }
+        .auto-style15 {
+            font-weight: normal;
+            height: 35px;
+        }
+        .auto-style16 {
+            height: 35px;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
     
-        <div>
-            <h1>Sign Up</h1>
-        <table class="auto-style1">
+            <div style="background-color:gray">
+                  <a href="http://leisner.dk/"><img alt="" class="auto-style2" src="Images/logo.png" /> </a>
+
+            <h1 style="background-color:#34cbb9; color:white"><strong style="margin-left: 280px;font-family: Papyrus"><em>Sign Up</em></strong></h1>
+        <table class="auto-style1" style="background-color:#fff">
             <tr>
-                <td class="auto-style2">&nbsp;Name</td>
-                <td class="auto-style3">
+                <td class="auto-style15"style="font-weight: 700; font-style: italic;font-family: Papyrus">Name</td>
+                <td class="auto-style15">
                     <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td class="auto-style16"></td>
             </tr>
             <tr>
-                <td class="auto-style2">Child&#39;s Name</td>
-                <td class="auto-style3">
+                <td class="auto-style14" style="font-weight: 700; font-style: italic;font-family: Papyrus">Child&#39;s Name</td>
+                <td class="auto-style15">
                     <asp:TextBox ID="txtChildName" runat="server"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td class="auto-style16"></td>
             </tr>
             <tr>
-                <td class="auto-style2">Password</td>
-                <td class="auto-style3">
+                <td class="auto-style14" style="font-weight: 700; font-style: italic;font-family: Papyrus">Password</td>
+                <td class="auto-style15">
                     <asp:TextBox ID="txtPass" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td class="auto-style16"></td>
             </tr>
             <tr>
-                <td class="auto-style2">Confirm Password</td>
-                <td class="auto-style3">
+                <td class="auto-style14" style="font-weight: 700; font-style: italic;font-family: Papyrus">Confirm Password</td>
+                <td class="auto-style15">
                     <asp:TextBox ID="txtConfirmPass" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td class="auto-style16"></td>
             </tr>
             <tr>
-                <td class="auto-style2">Email</td>
-                <td class="auto-style3">
+                <td class="auto-style14" style="font-weight: 700; font-style: italic;font-family: Papyrus">Email</td>
+                <td class="auto-style15">
                     <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td class="auto-style16"></td>
             </tr>
             
             <tr>
-                <td class="auto-style2">Doctor</td>
-                <td class="auto-style3">
+                <td class="auto-style14" style="font-weight: 700; font-style: italic;font-family: Papyrus">Doctor</td>
+                <td class="auto-style15">
                     <asp:TextBox ID="txtDoctor" runat="server"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td class="auto-style16"></td>
             </tr>
             
             <tr>
-                <td class="auto-style2">Address</td>
-                <td class="auto-style3">
+                <td class="auto-style14" style="font-weight: 700; font-style: italic;font-family: Papyrus">Address</td>
+                <td class="auto-style15">
                     <asp:TextBox ID="txtAddress" runat="server"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td class="auto-style16"></td>
             </tr>
             
             <tr>
-                <td class="auto-style2">Child&#39;s Birth Date</td>
-                <td class="auto-style3">
+                <td class="auto-style14"style="font-weight: 700; font-style: italic;font-family: Papyrus">Child&#39;s Birth Date</td>
+                <td class="auto-style15">
                     <asp:TextBox ID="txtBirthDate" runat="server"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td class="auto-style16"></td>
             </tr>
             
             <tr>
-                <td class="auto-style2">&nbsp;</td>
-                <td class="auto-style3">
-                    &nbsp;</td>
-                <td>&nbsp;</td>
+                <td class="auto-style14"></td>
+                <td class="auto-style15">
+        <asp:Button ID="Button1" runat="server" Text="Submit" style="font-weight: 700; font-style: italic;font-family: Papyrus; " Width="111px"/> 
+                </td>
+                <td class="auto-style16"></td>
             </tr>
             
         </table>
     
     </div>
-        <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
     </form>
+     <p style="background-color:gray; height: 101px;">
+        </p>
 </body>
 </html>

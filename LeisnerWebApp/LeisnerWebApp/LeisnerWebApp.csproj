@@ -63,6 +63,7 @@
     <Content Include="AdminPage.aspx" />
     <Content Include="DailyInfo.aspx" />
     <Content Include="FrontPage.aspx" />
+    <Content Include="Images\logo.png" />
     <Content Include="Service References\ServiceReference1\DBAccessService.disco" />
     <Content Include="Service References\ServiceReference1\configuration91.svcinfo" />
     <Content Include="Service References\ServiceReference1\configuration.svcinfo" />
