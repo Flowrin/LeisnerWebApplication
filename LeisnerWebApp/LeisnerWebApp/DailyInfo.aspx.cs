@@ -10,7 +10,7 @@ namespace LeisnerWebApp
 {
     public partial class DailyInfo : System.Web.UI.Page
     {
-        DBAccessServiceClient dbAccess = new DBAccessServiceClient();
+        
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -18,8 +18,7 @@ namespace LeisnerWebApp
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            string hour = TxtHour.Text;
-            dbAccess.SaveHour(hour);
+           
         }
   
     }
