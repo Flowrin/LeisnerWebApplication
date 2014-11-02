@@ -229,6 +229,7 @@ namespace LeisnerWebService
             con.Close();
 
         }
+
         #endregion
 
         #region PeePeeMethods
@@ -316,6 +317,17 @@ namespace LeisnerWebService
             cmd.Parameters.AddWithValue("@HourID", hourId);
             cmd.Parameters.AddWithValue("@DayID", dayId);
             cmd.Parameters.AddWithValue("@PeePeeID", peePeeId);
+        }
+
+        public void SaveHour(string Hour)
+        {
+            SqlConnection con = new SqlConnection(CONNECTION_STRING);
+
+            string sqlstring = ("Insert into Time (Hour) values (@Hour)");
+            SqlCommand cmd = new SqlCommand(sqlstring, con);
+
+            cmd.Parameters.AddWithValue("@Hour", Hour);
+
 
             try
             {
@@ -362,6 +374,7 @@ namespace LeisnerWebService
             // ...
         }
         conn.Close();
+
     }
     return result;
 }

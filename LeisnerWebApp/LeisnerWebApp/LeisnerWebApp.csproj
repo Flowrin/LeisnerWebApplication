@@ -60,8 +60,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminPage.aspx" />
     <Content Include="DailyInfo.aspx" />
     <Content Include="FrontPage.aspx" />
+    <Content Include="Images\logo.png" />
     <Content Include="Service References\ServiceReference1\DBAccessService.disco" />
     <Content Include="Service References\ServiceReference1\configuration91.svcinfo" />
     <Content Include="Service References\ServiceReference1\configuration.svcinfo" />
@@ -80,6 +82,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPage.aspx.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage.aspx.designer.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DailyInfo.aspx.cs">
       <DependentUpon>DailyInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

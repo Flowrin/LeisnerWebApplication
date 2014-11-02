@@ -24,6 +24,8 @@ namespace LeisnerWebService
         List<Time> FindAllTimes();
         [OperationContract]
         void SavePerson(int Status, string Email, string Password, string Name, string Address, string ChildsName, string Doctor, string DateOfBirth);
+        [OperationContract]
+        void SaveHour(string Hour);
     }
 }
 

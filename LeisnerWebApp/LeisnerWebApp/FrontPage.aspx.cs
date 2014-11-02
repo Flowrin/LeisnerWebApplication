@@ -39,8 +39,14 @@ namespace LeisnerWebApp
             string tempUser = txtName.Text;
             string tempPass = txtPassword.Text;
             foreach (Person person in personList)
-                if (person.Email == tempUser && person.Password == tempPass)
+            {
+                if (person.Email == tempUser && person.Password == tempPass && person.Status == 0)
                     Response.Redirect("DailyInfo.aspx");
+                else if (person.Email == tempUser && person.Password == tempPass && person.Status == 1)
+                    Response.Redirect("AdminPage.aspx");
+               // else FailureText.Text = "Invalid username and/or password";
+
+            }
         }
 
 
