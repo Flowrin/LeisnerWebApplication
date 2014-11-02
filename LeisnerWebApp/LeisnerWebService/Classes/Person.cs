@@ -16,26 +16,45 @@ namespace LeisnerWebApp.App_Code
         private string childName;
         private string doctor;
         private string dateOfBirth;
-      
 
+        private List<PeePee> peepees;
+
+
+        #region Constructors
+        public Person(int personId, int status, string email, string password, 
+            string name, string address, string childName, string dateOfBirth, string doctor)
+        {
+            this.personId = personId;
+            this.status = 0;
+            this.email = email;
+            this.password = password;
+            this.name = name;
+            this.address = address;
+            this.childName = childName;
+            this.doctor = doctor;
+            this.dateOfBirth = dateOfBirth;
+            this.peepees = new List<PeePee>();
+        }
+
+        public Person(string email, string password)
+        {
+            this.email = email;
+            this.password = password;
+        }
 
         public Person()
         {
-            //this.personId = personId;
-            //this.status = 0;
-            //this.email = email;
-            //this.password = password;
-            //this.name = name;
-            //this.address = address;
-            //this.childName = childName;
-            //this.doctor = doctor;
-            //this.dateOfBirth = dateOfBirth;
+            // TODO: Complete member initialization
         }
 
+        //public Person(int personId, List<PeePee> peepees)
+        //{
+        //    this.personId = personId;
+        //    peepees = new List<PeePee>();
+        //}
+        #endregion
 
-
-        //Properties
-
+        #region Properties
         public int PersonId
         {
             get { return personId; }
@@ -96,6 +115,20 @@ namespace LeisnerWebApp.App_Code
         {
             get { return dateOfBirth; }
             set { dateOfBirth = value; }
+        }
+        #endregion
+
+        public void AddPeePee(PeePee myPeePee)
+        {
+            peepees.Add(myPeePee);
+        }
+
+        public List<PeePee> GetAllPeePees()
+        {
+            if (peepees == null)
+                throw new Exception("No peepee results were found for this person");
+
+            return peepees;
         }
     }
 }

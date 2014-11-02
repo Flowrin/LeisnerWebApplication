@@ -40,6 +40,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.Data.Services.Client" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -64,10 +70,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Day.cs" />
-    <Content Include="Classes\PeePee.cs" />
+    <Compile Include="Classes\PeePee.cs" />
     <Compile Include="Classes\Person.cs" />
     <Compile Include="Classes\Time.cs" />
-    <Content Include="Classes\Week.cs" />
+    <Compile Include="Classes\Week.cs" />
     <Compile Include="DBAccessService.svc.cs">
       <DependentUpon>DBAccessService.svc</DependentUpon>
     </Compile>
@@ -84,6 +90,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
