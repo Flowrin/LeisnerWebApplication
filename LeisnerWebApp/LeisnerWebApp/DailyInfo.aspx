@@ -41,6 +41,8 @@
             </tr>
             <tr>
                 <td class="auto-style1">
+                    Week</td>
+                <td>
                     <asp:DropDownList ID="DropDownWeek" runat="server" DataSourceID="SqlDataSource1" DataTextField="WeekName" DataValueField="WeekName">
                         <asp:ListItem></asp:ListItem>
                         <asp:ListItem></asp:ListItem>
@@ -48,6 +50,14 @@
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:EJL12_DBConnectionString %>" SelectCommand="SELECT [WeekName] FROM [Week]"></asp:SqlDataSource>
                 </td>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style1">
+                    Day</td>
                 <td>
                     <asp:DropDownList ID="DropDownDay" runat="server" DataSourceID="SqlDataSource2" DataTextField="DayName" DataValueField="DayName">
                         <asp:ListItem></asp:ListItem>
@@ -57,44 +67,43 @@
                     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:EJL12_DBConnectionString %>" SelectCommand="SELECT [DayName] FROM [Day]"></asp:SqlDataSource>
                 </td>
                 <td>
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+                    Hour</td>
+                <td class="auto-style3">
                     <asp:TextBox ID="TxtHour" runat="server"></asp:TextBox>
                 </td>
-                <td>
+                <td class="auto-style3">
+                </td>
+                <td class="auto-style3">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+                    Size</td>
+                <td class="auto-style3">
                     <asp:DropDownList ID="DropDownSize" runat="server" DataSourceID="SqlDataSource3" DataTextField="Size" DataValueField="Size">
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:EJL12_DBConnectionString %>" SelectCommand="SELECT [Size] FROM [PeePee]"></asp:SqlDataSource>
                 </td>
-            </tr>
-            <tr>
-                <td class="auto-style1">
+                <td class="auto-style3">
                     &nbsp;</td>
-                <td>
+                <td class="auto-style3">
                     &nbsp;</td>
-                <td>
-                    &nbsp;</td>
-                <td>
-                    <asp:Button ID="btnChart" runat="server" OnClick="btnChart_Click" Text="Display Chart" />
-                </td>
             </tr>
             <tr>
                 <td class="auto-style2">
-                    Weekly chart:</td>
-                <td class="auto-style3">
-                    <asp:Chart ID="Chart1" runat="server" Visible="False" >
-                        <series>
-                            <asp:Series ChartType="Line" Name="Series1" YValuesPerPoint="2">
-                            </asp:Series>
-                        </series>
-                        <chartareas>
-                            <asp:ChartArea Name="ChartArea1">
-                                <AxisX2 IntervalType="Days">
-                                </AxisX2>
-                            </asp:ChartArea>
-                        </chartareas>
-                    </asp:Chart>
+                    <asp:Button ID="btnChart" runat="server" OnClick="btnChart_Click" Text="Display Chart" />
                 </td>
                 <td class="auto-style3">
+                    <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" />
                 </td>
+                <td class="auto-style3">
+                    &nbsp;</td>
                 <td class="auto-style3">
                     &nbsp;</td>
             </tr>

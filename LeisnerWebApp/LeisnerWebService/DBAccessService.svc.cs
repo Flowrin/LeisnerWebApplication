@@ -160,5 +160,32 @@ namespace LeisnerWebService
                 }
             }
         }
+        public void SaveHour(string Hour)
+        {
+            SqlConnection con = new SqlConnection(CONNECTION_STRING);
+
+            string sqlstring = ("Insert into Time (Hour) values (@Hour)");
+            SqlCommand cmd = new SqlCommand(sqlstring, con);
+
+            cmd.Parameters.AddWithValue("@Hour", Hour);
+
+
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+        }
     }
 }

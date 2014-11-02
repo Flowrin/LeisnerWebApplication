@@ -280,6 +280,12 @@ namespace LeisnerWebApp.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/SavePerson", ReplyAction="http://tempuri.org/IDBAccessService/SavePersonResponse")]
         System.Threading.Tasks.Task SavePersonAsync(int Status, string Email, string Password, string Name, string Address, string ChildsName, string Doctor, string DateOfBirth);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/SaveHour", ReplyAction="http://tempuri.org/IDBAccessService/SaveHourResponse")]
+        void SaveHour(string Hour);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/SaveHour", ReplyAction="http://tempuri.org/IDBAccessService/SaveHourResponse")]
+        System.Threading.Tasks.Task SaveHourAsync(string Hour);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -347,6 +353,14 @@ namespace LeisnerWebApp.ServiceReference1 {
         
         public System.Threading.Tasks.Task SavePersonAsync(int Status, string Email, string Password, string Name, string Address, string ChildsName, string Doctor, string DateOfBirth) {
             return base.Channel.SavePersonAsync(Status, Email, Password, Name, Address, ChildsName, Doctor, DateOfBirth);
+        }
+        
+        public void SaveHour(string Hour) {
+            base.Channel.SaveHour(Hour);
+        }
+        
+        public System.Threading.Tasks.Task SaveHourAsync(string Hour) {
+            return base.Channel.SaveHourAsync(Hour);
         }
     }
 }
