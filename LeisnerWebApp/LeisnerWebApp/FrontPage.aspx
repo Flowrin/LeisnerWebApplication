@@ -59,8 +59,8 @@
     <div>
     
         <h1 style="height: 153px; width: 705px">   
-            <a href="http://leisner.dk/"><img alt="" class="auto-style2" src="Images/imagegen.jpg" />
-            
+            < href="http://leisner.dk/"><img alt="" class="auto-style2" src="Images/imagegen.jpg" />
+           
         </h1>
     
     </div>
