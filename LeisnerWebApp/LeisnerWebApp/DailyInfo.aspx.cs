@@ -21,6 +21,11 @@ namespace LeisnerWebApp
             string hour = TxtHour.Text;
             dbAccess.SaveHour(hour);
         }
+
+        protected void btnChart_Click(object sender, EventArgs e)
+        {
+
+        }
   
     }
 }

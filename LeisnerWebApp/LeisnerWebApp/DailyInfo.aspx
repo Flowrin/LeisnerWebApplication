@@ -25,6 +25,13 @@
         .auto-style5 {
             height: 23px;
         }
+        .auto-style6 {
+            width: 139px;
+            height: 59px;
+        }
+        .auto-style7 {
+            height: 59px;
+        }
     </style>
 </head>
 <body>
@@ -34,21 +41,18 @@
     </div>
         <table style="width:100%; height: 112px;">
             <tr>
-                <td class="auto-style4">Week</td>
-                <td class="auto-style5">Day</td>
-                <td class="auto-style5">Hour</td>
-                <td class="auto-style5">Size</td>
+                <td class="auto-style4">&nbsp;</td>
+                <td class="auto-style5">&nbsp;</td>
+                <td class="auto-style5">&nbsp;</td>
+                <td class="auto-style5">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style1">
                     Week</td>
                 <td>
-                    <asp:DropDownList ID="DropDownWeek" runat="server" DataSourceID="SqlDataSource1" DataTextField="WeekName" DataValueField="WeekName">
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
+                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="WeekName" DataValueField="WeekID">
                     </asp:DropDownList>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:EJL12_DBConnectionString %>" SelectCommand="SELECT [WeekName] FROM [Week]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:EJL12_DBConnectionString %>" SelectCommand="SELECT * FROM [Week]"></asp:SqlDataSource>
                 </td>
                 <td>
                     &nbsp;</td>
@@ -56,20 +60,20 @@
                     &nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style1">
+                <td class="auto-style6">
                     Day</td>
-                <td>
-                    <asp:DropDownList ID="DropDownDay" runat="server" DataSourceID="SqlDataSource2" DataTextField="DayName" DataValueField="DayName">
+                <td class="auto-style7">
+                    <asp:DropDownList ID="DropDownDay" runat="server" DataSourceID="SqlDataSource2" DataTextField="DayName" DataValueField="DayID">
                         <asp:ListItem></asp:ListItem>
                         <asp:ListItem></asp:ListItem>
                         <asp:ListItem></asp:ListItem>
                     </asp:DropDownList>
-                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:EJL12_DBConnectionString %>" SelectCommand="SELECT [DayName] FROM [Day]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:EJL12_DBConnectionString %>" SelectCommand="SELECT * FROM [Day]"></asp:SqlDataSource>
                 </td>
-                <td>
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
+                <td class="auto-style7">
+                    </td>
+                <td class="auto-style7">
+                    </td>
             </tr>
             <tr>
                 <td class="auto-style2">
@@ -86,9 +90,9 @@
                 <td class="auto-style2">
                     Size</td>
                 <td class="auto-style3">
-                    <asp:DropDownList ID="DropDownSize" runat="server" DataSourceID="SqlDataSource3" DataTextField="Size" DataValueField="Size">
+                    <asp:DropDownList ID="DropDownSize" runat="server" DataSourceID="SqlDataSource3" DataTextField="Size" DataValueField="PeePeeID">
                     </asp:DropDownList>
-                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:EJL12_DBConnectionString %>" SelectCommand="SELECT [Size] FROM [PeePee]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:EJL12_DBConnectionString %>" SelectCommand="SELECT * FROM [PeePee]"></asp:SqlDataSource>
                 </td>
                 <td class="auto-style3">
                     &nbsp;</td>
