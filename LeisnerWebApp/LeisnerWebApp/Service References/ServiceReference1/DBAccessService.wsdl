@@ -5,6 +5,7 @@
       <xsd:import schemaLocation="http://localhost:11818/DBAccessService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:11818/DBAccessService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:11818/DBAccessService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LeisnerWebApp.App_Code" />
+      <xsd:import schemaLocation="http://localhost:11818/DBAccessService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LeisnerWebService.Classes" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IDBAccessService_FindPerson_InputMessage">
@@ -43,6 +44,18 @@
   <wsdl:message name="IDBAccessService_SaveHour_OutputMessage">
     <wsdl:part name="parameters" element="tns:SaveHourResponse" />
   </wsdl:message>
+  <wsdl:message name="IDBAccessService_FindInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindInfo" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_FindInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_SaveInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveInfo" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_SaveInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveInfoResponse" />
+  </wsdl:message>
   <wsdl:portType name="IDBAccessService">
     <wsdl:operation name="FindPerson">
       <wsdl:input wsaw:Action="http://tempuri.org/IDBAccessService/FindPerson" message="tns:IDBAccessService_FindPerson_InputMessage" />
@@ -67,6 +80,14 @@
     <wsdl:operation name="SaveHour">
       <wsdl:input wsaw:Action="http://tempuri.org/IDBAccessService/SaveHour" message="tns:IDBAccessService_SaveHour_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IDBAccessService/SaveHourResponse" message="tns:IDBAccessService_SaveHour_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBAccessService/FindInfo" message="tns:IDBAccessService_FindInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBAccessService/FindInfoResponse" message="tns:IDBAccessService_FindInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBAccessService/SaveInfo" message="tns:IDBAccessService_SaveInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBAccessService/SaveInfoResponse" message="tns:IDBAccessService_SaveInfo_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IDBAccessService" type="tns:IDBAccessService">
@@ -118,6 +139,24 @@
     </wsdl:operation>
     <wsdl:operation name="SaveHour">
       <soap:operation soapAction="http://tempuri.org/IDBAccessService/SaveHour" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindInfo">
+      <soap:operation soapAction="http://tempuri.org/IDBAccessService/FindInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveInfo">
+      <soap:operation soapAction="http://tempuri.org/IDBAccessService/SaveInfo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

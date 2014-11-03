@@ -10,6 +10,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using LeisnerWebApp.App_Code;
+using LeisnerWebService.Classes;
 
 using System.Data.Common;
 using System.Reflection.Emit;
@@ -365,61 +366,36 @@ namespace LeisnerWebService
 
 
 
-        //public void FindInfo(Person personId, string size, int peePeeId)
-        //{
-//            public DataSet SelectOne(int id)
-//        {
-//            SqlConnection conn = new SqlConnection(CONNECTION_STRING);
-//            DataSet result = new DataSet();
-//            using (DbCommand command = conn.CreateCommand())
-//            {
-//                command.CommandText = @"
-//            select * from table1
-//            select * from table2
-//                    ";
+        public List<Common> FindInfo()
+        {
+            List<Common> myCommonList = new List<Common>();
+            Common _common = new Common();
 
-//                    var param = ParameterBuilder.CreateByKey(command, "ID", id, null);
-//                command.Parameters.Add(param);
+            SqlConnection con = new SqlConnection(CONNECTION_STRING);
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
 
-//             conn.Open();
-//                using (DbDataReader reader = command.ExecuteReader())
-//        {   
-//            result.MainTable.Load(reader);
-//            reader.NextResult();
-//            result.SecondTable.Load(reader);
-//            // ...
-//        }
-//        conn.Close();
+            cmd.CommandText = "Select * From " + "Common";
 
-//    }
-//    return result;
-//}
+            con.Open();
+            SqlDataReader datareader = cmd.ExecuteReader();
 
+            while (datareader.Read())
+            {
+                
+                _common.DayId = (int)datareader["DaiID"];
+                _common.HourId = (int)datareader["HourID"];
+                _common.PersonId = (int)datareader["PersonID"];
+                _common.SizeId = (int)datareader["SizeID"];
+                _common.WeekId = (int)datareader["SizeID"];
+               
+                myCommonList.Add(_common);
+            }
 
-            //SqlConnection con = new SqlConnection(CONNECTION_STRING);
-            //SqlCommand cmd = new SqlCommand();
-            //cmd.Connection = con;
-            //cmd.CommandText = "Select * From " + "Person" + " Where PersonID = @PersonID" + "PeePee" + " Where PeePeeID = @PeePeeID" ;
+            con.Close();
 
-            //cmd.Parameters.Add("@PeePeeID", SqlDbType.Int, 0, "PeePeeID");
-            //cmd.Parameters["@PeePeeID"].Direction = ParameterDirection.Output;
-
-            //cmd.Parameters.AddWithValue("@PersonID", _person.PersonId);
-            //cmd.Parameters.AddWithValue("@Size", size);
-
-            //int id;
-            //try
-            //{
-            //    cmd.ExecuteNonQuery();
-            //    id = int.Parse(cmd.Parameters["@PeePeeID"].Value.ToString());
-            //}
-            //catch (Exception ex)
-            //{
-            //    throw new Exception("Could not add a result" + ex.Message);
-            //}
-
-            //peePeeId.ToString();
-        
+            return myCommonList;
+        }
         }
         
         }

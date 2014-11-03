@@ -64,19 +64,6 @@
     <Content Include="DailyInfo.aspx" />
     <Content Include="FrontPage.aspx" />
     <Content Include="Images\logo.png" />
-    <Content Include="Service References\ServiceReference1\DBAccessService.disco" />
-    <Content Include="Service References\ServiceReference1\configuration91.svcinfo" />
-    <Content Include="Service References\ServiceReference1\configuration.svcinfo" />
-    <Content Include="Service References\ServiceReference1\LeisnerWebApp.ServiceReference1.Person.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\ServiceReference1\LeisnerWebApp.ServiceReference1.Time.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\ServiceReference1\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
     <Content Include="SignUp.aspx" />
     <Content Include="Images\imagegen.jpg" />
     <Content Include="Web.config" />
@@ -103,11 +90,6 @@
     <Compile Include="FrontPage.aspx.designer.cs">
       <DependentUpon>FrontPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Service References\ServiceReference1\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="SignUp.aspx.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -118,16 +100,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Service References\ServiceReference1\DBAccessService.wsdl" />
-    <None Include="Service References\ServiceReference1\DBAccessService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServiceReference1\DBAccessService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServiceReference1\DBAccessService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -137,9 +109,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
