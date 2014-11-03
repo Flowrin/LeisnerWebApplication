@@ -317,6 +317,22 @@ namespace LeisnerWebService
             cmd.Parameters.AddWithValue("@HourID", hourId);
             cmd.Parameters.AddWithValue("@DayID", dayId);
             cmd.Parameters.AddWithValue("@PeePeeID", peePeeId);
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
         }
 
         public void SaveHour(string Hour)
