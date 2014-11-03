@@ -30,7 +30,7 @@ namespace LeisnerWebService
         [OperationContract]
         List<Common> FindInfo();
         [OperationContract]
-        void SaveInfo(Person personId, Week weekId, Time hourId, Day dayId, PeePee peePeeId);
+        void SaveInfo(int personId, int weekId, int hourId, int dayId, int peePeeId);
     }
 }
 

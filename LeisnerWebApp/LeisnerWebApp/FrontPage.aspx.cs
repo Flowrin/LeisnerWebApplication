@@ -15,7 +15,7 @@ namespace LeisnerWebApp
         public int Id
         {
             get { return id; }
-            set { id = value; }
+           
         }
         DBAccessServiceClient dbAccess = new DBAccessServiceClient();
         protected void Page_Load(object sender, EventArgs e)

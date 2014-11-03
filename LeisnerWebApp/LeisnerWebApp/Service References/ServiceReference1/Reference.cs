@@ -356,189 +356,6 @@ namespace LeisnerWebApp.ServiceReference1 {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Week", Namespace="http://schemas.datacontract.org/2004/07/LeisnerWebApp.App_Code")]
-    [System.SerializableAttribute()]
-    public partial class Week : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int WeekIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string WeekNameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int WeekId {
-            get {
-                return this.WeekIdField;
-            }
-            set {
-                if ((this.WeekIdField.Equals(value) != true)) {
-                    this.WeekIdField = value;
-                    this.RaisePropertyChanged("WeekId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string WeekName {
-            get {
-                return this.WeekNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.WeekNameField, value) != true)) {
-                    this.WeekNameField = value;
-                    this.RaisePropertyChanged("WeekName");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Day", Namespace="http://schemas.datacontract.org/2004/07/LeisnerWebApp.App_Code")]
-    [System.SerializableAttribute()]
-    public partial class Day : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int DayIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DayNameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int DayId {
-            get {
-                return this.DayIdField;
-            }
-            set {
-                if ((this.DayIdField.Equals(value) != true)) {
-                    this.DayIdField = value;
-                    this.RaisePropertyChanged("DayId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string DayName {
-            get {
-                return this.DayNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DayNameField, value) != true)) {
-                    this.DayNameField = value;
-                    this.RaisePropertyChanged("DayName");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PeePee", Namespace="http://schemas.datacontract.org/2004/07/LeisnerWebApp.App_Code")]
-    [System.SerializableAttribute()]
-    public partial class PeePee : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PeePeeIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SizeField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PeePeeId {
-            get {
-                return this.PeePeeIdField;
-            }
-            set {
-                if ((this.PeePeeIdField.Equals(value) != true)) {
-                    this.PeePeeIdField = value;
-                    this.RaisePropertyChanged("PeePeeId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Size {
-            get {
-                return this.SizeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SizeField, value) != true)) {
-                    this.SizeField = value;
-                    this.RaisePropertyChanged("Size");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IDBAccessService")]
     public interface IDBAccessService {
@@ -586,10 +403,10 @@ namespace LeisnerWebApp.ServiceReference1 {
         System.Threading.Tasks.Task<LeisnerWebApp.ServiceReference1.Common[]> FindInfoAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/SaveInfo", ReplyAction="http://tempuri.org/IDBAccessService/SaveInfoResponse")]
-        void SaveInfo(LeisnerWebApp.ServiceReference1.Person personId, LeisnerWebApp.ServiceReference1.Week weekId, LeisnerWebApp.ServiceReference1.Time hourId, LeisnerWebApp.ServiceReference1.Day dayId, LeisnerWebApp.ServiceReference1.PeePee peePeeId);
+        void SaveInfo(int personId, int weekId, int hourId, int dayId, int peePeeId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/SaveInfo", ReplyAction="http://tempuri.org/IDBAccessService/SaveInfoResponse")]
-        System.Threading.Tasks.Task SaveInfoAsync(LeisnerWebApp.ServiceReference1.Person personId, LeisnerWebApp.ServiceReference1.Week weekId, LeisnerWebApp.ServiceReference1.Time hourId, LeisnerWebApp.ServiceReference1.Day dayId, LeisnerWebApp.ServiceReference1.PeePee peePeeId);
+        System.Threading.Tasks.Task SaveInfoAsync(int personId, int weekId, int hourId, int dayId, int peePeeId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -675,11 +492,11 @@ namespace LeisnerWebApp.ServiceReference1 {
             return base.Channel.FindInfoAsync();
         }
         
-        public void SaveInfo(LeisnerWebApp.ServiceReference1.Person personId, LeisnerWebApp.ServiceReference1.Week weekId, LeisnerWebApp.ServiceReference1.Time hourId, LeisnerWebApp.ServiceReference1.Day dayId, LeisnerWebApp.ServiceReference1.PeePee peePeeId) {
+        public void SaveInfo(int personId, int weekId, int hourId, int dayId, int peePeeId) {
             base.Channel.SaveInfo(personId, weekId, hourId, dayId, peePeeId);
         }
         
-        public System.Threading.Tasks.Task SaveInfoAsync(LeisnerWebApp.ServiceReference1.Person personId, LeisnerWebApp.ServiceReference1.Week weekId, LeisnerWebApp.ServiceReference1.Time hourId, LeisnerWebApp.ServiceReference1.Day dayId, LeisnerWebApp.ServiceReference1.PeePee peePeeId) {
+        public System.Threading.Tasks.Task SaveInfoAsync(int personId, int weekId, int hourId, int dayId, int peePeeId) {
             return base.Channel.SaveInfoAsync(personId, weekId, hourId, dayId, peePeeId);
         }
     }
