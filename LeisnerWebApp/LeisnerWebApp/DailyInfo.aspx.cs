@@ -10,6 +10,7 @@ namespace LeisnerWebApp
 {
     public partial class DailyInfo : System.Web.UI.Page
     {
+        FrontPage fp = new FrontPage();
         DBAccessServiceClient dbAccess = new DBAccessServiceClient();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,10 +20,12 @@ namespace LeisnerWebApp
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             int weekId, dayId, sizeId, hourId,personId;
-            weekId = dropDownWeek.SelectedIndex;
-            dayId = dropDownDay.SelectedIndex;
-            sizeId = dropDownSize.SelectedIndex;
-            hourId = dropDownHour.SelectedIndex;
+            weekId = dropDownWeek.SelectedIndex+1;
+            dayId = dropDownDay.SelectedIndex+1;
+            sizeId = dropDownSize.SelectedIndex+1;
+            hourId = dropDownHour.SelectedIndex+1;
+            personId = fp.Id;
+            dbAccess.SaveInfo(personId, weekId, hourId, dayId, sizeId);
         }
 
         protected void btnChart_Click(object sender, EventArgs e)

@@ -102,7 +102,7 @@
             <tr>
                 <td class="auto-style14"></td>
                 <td class="auto-style15">
-        <asp:Button ID="Button1" runat="server" Text="Submit" style="font-weight: 700; font-style: italic;font-family: Papyrus; " Width="111px"/> 
+        <asp:Button ID="Button1" runat="server" Text="Submit" style="font-weight: 700; font-style: italic;font-family: Papyrus; " Width="111px" OnClick="Button1_Click1"/> 
                 </td>
                 <td class="auto-style16"></td>
             </tr>
