@@ -10,7 +10,6 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using LeisnerWebApp.App_Code;
-using LeisnerWebService.Classes;
 
 using System.Data.Common;
 using System.Reflection.Emit;
@@ -334,38 +333,6 @@ namespace LeisnerWebService
                     con.Close();
                 }
             }
-        }
-        public List<Common> FindInfo(int PersonId)
-        {
-            List<Common> myPersonList = new List<Common>();
-            Common _common = new Common(PersonId);
-            SqlConnection con = new SqlConnection(CONNECTION_STRING);
-            SqlCommand cmd = new SqlCommand();
-
-            cmd.Connection = con;
-
-            cmd.CommandText = "Select * From " + "Common" + " Where PersonId = @PersonID";
-
-            SqlParameter par = new SqlParameter("@PersonID", SqlDbType.Int);
-            par.Value = _person.PersonId;
-            cmd.Parameters.Add(par);
-            _person = new Person();
-            con.Open();
-            SqlDataReader datareader = cmd.ExecuteReader();
-            while (datareader.Read())
-            {
-                
-                _common.PersonId = (int)datareader["PersonID"];
-               _common.WeekId = (int)datareader["WeekID"];
-                _common.DayId = (int)datareader["DayID"];
-                _common.HourId = (int)datareader["HourID"];
-                _common.SizeId = (int)datareader["SizeID"];
-                
-                myPersonList.Add(_common);
-            }
-            con.Close();
-
-            return myPersonList;
         }
 
         public void SaveHour(string Hour)
