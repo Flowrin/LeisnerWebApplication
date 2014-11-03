@@ -10,7 +10,7 @@ namespace LeisnerWebApp
 {
     public partial class FrontPage : System.Web.UI.Page
     {
-        int id;
+       static int id;
 
         public int Id
         {
@@ -49,10 +49,15 @@ namespace LeisnerWebApp
             foreach (Person person in personList)
             {
                 if (person.Email == tempUser && person.Password == tempPass && person.Status == 0)
+                {
+                    Id = person.PersonId;
                     Response.Redirect("DailyInfo.aspx");
+                    
+                }
                 else if (person.Email == tempUser && person.Password == tempPass && person.Status == 1)
-                { Response.Redirect("AdminPage.aspx");
-                id = person.PersonId;
+                {
+                    Response.Redirect("AdminPage.aspx");
+                    id = person.PersonId;
                 }
                // else FailureText.Text = "Invalid username and/or password";
 
