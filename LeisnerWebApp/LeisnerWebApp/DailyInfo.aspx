@@ -50,7 +50,7 @@
                 <td class="auto-style1">
                     Week</td>
                 <td>
-                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="WeekName" DataValueField="WeekID">
+                    <asp:DropDownList ID="dropDownWeek" runat="server" DataSourceID="SqlDataSource1" DataTextField="WeekName" DataValueField="WeekID">
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:EJL12_DBConnectionString %>" SelectCommand="SELECT * FROM [Week]"></asp:SqlDataSource>
                 </td>
@@ -63,7 +63,7 @@
                 <td class="auto-style6">
                     Day</td>
                 <td class="auto-style7">
-                    <asp:DropDownList ID="DropDownDay" runat="server" DataSourceID="SqlDataSource2" DataTextField="DayName" DataValueField="DayID">
+                    <asp:DropDownList ID="dropDownDay" runat="server" DataSourceID="SqlDataSource2" DataTextField="DayName" DataValueField="DayID">
                         <asp:ListItem></asp:ListItem>
                         <asp:ListItem></asp:ListItem>
                         <asp:ListItem></asp:ListItem>
@@ -79,7 +79,7 @@
                 <td class="auto-style2">
                     Hour</td>
                 <td class="auto-style3">
-                    <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource4" DataTextField="Hour" DataValueField="HourID">
+                    <asp:DropDownList ID="dropDownHour" runat="server" DataSourceID="SqlDataSource4" DataTextField="Hour" DataValueField="HourID">
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:EJL12_DBConnectionString %>" SelectCommand="SELECT [Hour], [HourID] FROM [Time]"></asp:SqlDataSource>
                 </td>
@@ -92,7 +92,7 @@
                 <td class="auto-style2">
                     Size</td>
                 <td class="auto-style3">
-                    <asp:DropDownList ID="DropDownSize" runat="server" DataSourceID="SqlDataSource3" DataTextField="Size" DataValueField="PeePeeID">
+                    <asp:DropDownList ID="dropDownSize" runat="server" DataSourceID="SqlDataSource3" DataTextField="Size" DataValueField="PeePeeID">
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:EJL12_DBConnectionString %>" SelectCommand="SELECT * FROM [PeePee]"></asp:SqlDataSource>
                 </td>

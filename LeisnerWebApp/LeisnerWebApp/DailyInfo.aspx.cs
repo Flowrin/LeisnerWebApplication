@@ -18,8 +18,8 @@ namespace LeisnerWebApp
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            //string hour;
-            //dbAccess.SaveHour(hour);
+            int weekId, dayId, sizeId, hourId,personId;
+
         }
 
         protected void btnChart_Click(object sender, EventArgs e)

@@ -22,13 +22,13 @@ namespace LeisnerWebApp {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// dropDownWeek control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList dropDownWeek;
         
         /// <summary>
         /// SqlDataSource1 control.
@@ -40,13 +40,13 @@ namespace LeisnerWebApp {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
-        /// DropDownDay control.
+        /// dropDownDay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownDay;
+        protected global::System.Web.UI.WebControls.DropDownList dropDownDay;
         
         /// <summary>
         /// SqlDataSource2 control.
@@ -58,13 +58,13 @@ namespace LeisnerWebApp {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
         
         /// <summary>
-        /// DropDownList2 control.
+        /// dropDownHour control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList dropDownHour;
         
         /// <summary>
         /// SqlDataSource4 control.
@@ -76,13 +76,13 @@ namespace LeisnerWebApp {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource4;
         
         /// <summary>
-        /// DropDownSize control.
+        /// dropDownSize control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownSize;
+        protected global::System.Web.UI.WebControls.DropDownList dropDownSize;
         
         /// <summary>
         /// SqlDataSource3 control.
