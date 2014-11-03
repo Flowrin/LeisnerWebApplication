@@ -307,7 +307,7 @@ namespace LeisnerWebService
         }
         #endregion
 
-        public void SaveInfo(int personId, int weekId, int hourId, int dayId, int peePeeId)
+        public void SaveInfo(Person personId, Week weekId, Time hourId, Day dayId, PeePee peePeeId)
         {
             SqlConnection con = new SqlConnection(CONNECTION_STRING);
 

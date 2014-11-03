@@ -33,4 +33,25 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Time" nillable="true" type="tns:Time" />
+  <xs:complexType name="Week">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WeekId" type="xs:int" />
+      <xs:element minOccurs="0" name="WeekName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Week" nillable="true" type="tns:Week" />
+  <xs:complexType name="Day">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DayId" type="xs:int" />
+      <xs:element minOccurs="0" name="DayName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Day" nillable="true" type="tns:Day" />
+  <xs:complexType name="PeePee">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PeePeeId" type="xs:int" />
+      <xs:element minOccurs="0" name="Size" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PeePee" nillable="true" type="tns:PeePee" />
 </xs:schema>

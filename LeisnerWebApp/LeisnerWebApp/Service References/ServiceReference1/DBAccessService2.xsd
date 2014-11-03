@@ -92,11 +92,11 @@
   <xs:element name="SaveInfo">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="personId" type="xs:int" />
-        <xs:element minOccurs="0" name="weekId" type="xs:int" />
-        <xs:element minOccurs="0" name="hourId" type="xs:int" />
-        <xs:element minOccurs="0" name="dayId" type="xs:int" />
-        <xs:element minOccurs="0" name="peePeeId" type="xs:int" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/LeisnerWebApp.App_Code" minOccurs="0" name="personId" nillable="true" type="q4:Person" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/LeisnerWebApp.App_Code" minOccurs="0" name="weekId" nillable="true" type="q5:Week" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/LeisnerWebApp.App_Code" minOccurs="0" name="hourId" nillable="true" type="q6:Time" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/LeisnerWebApp.App_Code" minOccurs="0" name="dayId" nillable="true" type="q7:Day" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/LeisnerWebApp.App_Code" minOccurs="0" name="peePeeId" nillable="true" type="q8:PeePee" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
