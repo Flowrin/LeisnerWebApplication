@@ -18,3 +18,8 @@ C:\Users\Sebi\Desktop\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.dll
 C:\Users\Sebi\Desktop\LeisnerWebApp\LeisnerWebApp\bin\LeisnerWebApp.dll
 C:\Users\Sebi\Desktop\LeisnerWebApp\LeisnerWebApp\bin\LeisnerWebApp.pdb
 C:\Users\Sebi\Desktop\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.pdb
+C:\Users\Andreana\Documents\GIT\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\bin\LeisnerWebApp.dll
+C:\Users\Andreana\Documents\GIT\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\bin\LeisnerWebApp.pdb
+C:\Users\Andreana\Documents\GIT\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.csprojResolveAssemblyReference.cache
+C:\Users\Andreana\Documents\GIT\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.dll
+C:\Users\Andreana\Documents\GIT\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.pdb
