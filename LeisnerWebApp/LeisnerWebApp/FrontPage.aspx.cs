@@ -10,6 +10,13 @@ namespace LeisnerWebApp
 {
     public partial class FrontPage : System.Web.UI.Page
     {
+        int id;
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
         DBAccessServiceClient dbAccess = new DBAccessServiceClient();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -34,6 +41,7 @@ namespace LeisnerWebApp
 
         protected void LoginButton_Click(object sender, EventArgs e)
         {
+            
             Person[] personList;
             personList = dbAccess.FindAllPersons();
             string tempUser = txtName.Text;
@@ -43,7 +51,9 @@ namespace LeisnerWebApp
                 if (person.Email == tempUser && person.Password == tempPass && person.Status == 0)
                     Response.Redirect("DailyInfo.aspx");
                 else if (person.Email == tempUser && person.Password == tempPass && person.Status == 1)
-                    Response.Redirect("AdminPage.aspx");
+                { Response.Redirect("AdminPage.aspx");
+                id = person.PersonId;
+                }
                // else FailureText.Text = "Invalid username and/or password";
 
             }

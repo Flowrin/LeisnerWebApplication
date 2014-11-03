@@ -19,7 +19,10 @@ namespace LeisnerWebApp
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             int weekId, dayId, sizeId, hourId,personId;
-
+            weekId = dropDownWeek.SelectedIndex;
+            dayId = dropDownDay.SelectedIndex;
+            sizeId = dropDownSize.SelectedIndex;
+            hourId = dropDownHour.SelectedIndex;
         }
 
         protected void btnChart_Click(object sender, EventArgs e)
