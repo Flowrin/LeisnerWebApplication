@@ -12,7 +12,7 @@
             width: 139px;
         }
         .auto-style2 {
-            width: 139px;
+            width: 206px;
             height: 25px;
         }
         .auto-style3 {
@@ -35,11 +35,14 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
+    <form id="form1" runat="server" style="background-color:gray">
+        <a href="http://leisner.dk/"><img  src="Images/logo.png" style="width: 1128px" /> </a>
+    <div style="background-color:gray">
+          
     
     </div>
-        <table style="width:100%; height: 112px;">
+        <h1 style="background-color:#34cbb9; color:white"><strong style="margin-left: 280px;font-family: Papyrus"><em>Daily Info</em></strong></h1>
+        <table style="width:100%; height: 112px; background-color:#fff;font-family: Papyrus;border-bottom-color:gray">
             <tr>
                 <td class="auto-style4">&nbsp;</td>
                 <td class="auto-style5">&nbsp;</td>
@@ -102,11 +105,11 @@
                     &nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">
-                    <asp:Button ID="btnChart" runat="server" OnClick="btnChart_Click" Text="Display Chart" />
+                <td class="auto-style2" >
+                    <asp:Button runat="server" CommandName="btnChart" Text="Chart" ValidationGroup="Chart1" ID="btnChart"  style="text-align: right; font-weight: 700; font-style: italic;font-family: Papyrus; margin-left: 143px;" Width="117px" OnClick="btnChart_Click"></asp:Button>
                 </td>
-                <td class="auto-style3">
-                    <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" />
+                    <td class="auto-style3">
+                    <asp:Button ID="SubmitButton" runat="server" CommandName="Submit" Height="34px" OnClick="btnSubmit_Click" style="text-align: right; font-weight: 700; font-style: italic;font-family: Papyrus; margin-left: 165px;" Text="Submit" ValidationGroup="Submit1" Width="151px" />
                 </td>
                 <td class="auto-style3">
                     &nbsp;</td>
@@ -114,6 +117,7 @@
                     &nbsp;</td>
             </tr>
         </table>
+        <p style="background-color:gray; height: 151px;"> </p>
     </form>
 </body>
 </html>
