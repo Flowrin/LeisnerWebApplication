@@ -351,33 +351,33 @@ namespace LeisnerWebService
 
         //public void FindInfo(Person personId, string size, int peePeeId)
         //{
-            public DataSet SelectOne(int id)
-        {
-            SqlConnection conn = new SqlConnection(CONNECTION_STRING);
-            DataSet result = new DataSet();
-            using (DbCommand command = conn.CreateCommand())
-            {
-                command.CommandText = @"
-            select * from table1
-            select * from table2
-                    ";
+//            public DataSet SelectOne(int id)
+//        {
+//            SqlConnection conn = new SqlConnection(CONNECTION_STRING);
+//            DataSet result = new DataSet();
+//            using (DbCommand command = conn.CreateCommand())
+//            {
+//                command.CommandText = @"
+//            select * from table1
+//            select * from table2
+//                    ";
 
-                    var param = ParameterBuilder.CreateByKey(command, "ID", id, null);
-                command.Parameters.Add(param);
+//                    var param = ParameterBuilder.CreateByKey(command, "ID", id, null);
+//                command.Parameters.Add(param);
 
-             conn.Open();
-                using (DbDataReader reader = command.ExecuteReader())
-        {   
-            result.MainTable.Load(reader);
-            reader.NextResult();
-            result.SecondTable.Load(reader);
-            // ...
-        }
-        conn.Close();
+//             conn.Open();
+//                using (DbDataReader reader = command.ExecuteReader())
+//        {   
+//            result.MainTable.Load(reader);
+//            reader.NextResult();
+//            result.SecondTable.Load(reader);
+//            // ...
+//        }
+//        conn.Close();
 
-    }
-    return result;
-}
+//    }
+//    return result;
+//}
 
 
             //SqlConnection con = new SqlConnection(CONNECTION_STRING);

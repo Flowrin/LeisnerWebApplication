@@ -79,7 +79,9 @@
                 <td class="auto-style2">
                     Hour</td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="TxtHour" runat="server"></asp:TextBox>
+                    <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource4" DataTextField="Hour" DataValueField="HourID">
+                    </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:EJL12_DBConnectionString %>" SelectCommand="SELECT [Hour], [HourID] FROM [Time]"></asp:SqlDataSource>
                 </td>
                 <td class="auto-style3">
                 </td>
