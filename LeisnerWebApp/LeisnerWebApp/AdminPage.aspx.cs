@@ -21,7 +21,21 @@ namespace LeisnerWebApp
 
         protected void btnShowInfo_Click1(object sender, EventArgs e)
         {
-            lblVal.Text = listViewPerson.SelectedIndex.ToString();
+          //  lblVal.Text = listViewPerson.SelectedIndex.ToString();
         }
+
+      
+
+        protected void listViewPerson_ItemCommand(object sender, ListViewCommandEventArgs e)
+        {
+            System.Web.UI.WebControls.Button btn = e.CommandSource as System.Web.UI.WebControls.Button;
+
+            ListViewItem item = btn.NamingContainer as ListViewItem;
+          
+            Label label1 = item.FindControl("ChildsNameLabel") as Label;
+            string kupa = label1.Text;
+        }
+
+        
     }
 }

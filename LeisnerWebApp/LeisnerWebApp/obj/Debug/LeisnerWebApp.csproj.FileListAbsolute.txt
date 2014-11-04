@@ -23,3 +23,9 @@ C:\Users\Andreana\Documents\GIT\LeisnerWebApplication\LeisnerWebApp\LeisnerWebAp
 C:\Users\Andreana\Documents\GIT\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.csprojResolveAssemblyReference.cache
 C:\Users\Andreana\Documents\GIT\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.dll
 C:\Users\Andreana\Documents\GIT\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.pdb
+C:\Users\jan\Documents\LeisnerWebApp233\LeisnerWebApp\LeisnerWebApp\bin\LeisnerWebApp.dll.config
+C:\Users\jan\Documents\LeisnerWebApp233\LeisnerWebApp\LeisnerWebApp\bin\LeisnerWebApp.dll
+C:\Users\jan\Documents\LeisnerWebApp233\LeisnerWebApp\LeisnerWebApp\bin\LeisnerWebApp.pdb
+C:\Users\jan\Documents\LeisnerWebApp233\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.csprojResolveAssemblyReference.cache
+C:\Users\jan\Documents\LeisnerWebApp233\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.dll
+C:\Users\jan\Documents\LeisnerWebApp233\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.pdb

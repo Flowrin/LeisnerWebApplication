@@ -14,7 +14,7 @@
             <tr>
                 <td>
     
-        <asp:ListView ID="listViewPerson" runat="server" DataSourceID="SqlDataSourcePersonList">
+        <asp:ListView  ID="listViewPerson" runat="server" DataSourceID="SqlDataSourcePersonList"  OnItemCommand="listViewPerson_ItemCommand" OnSelectedIndexChanged="listViewPerson_SelectedIndexChanged">
             <AlternatingItemTemplate>
                 <tr style="background-color:#FFF8DC;">
                     <td>
@@ -34,6 +34,9 @@
                     </td>
                     <td>
                         <asp:Label ID="DoctorLabel" runat="server" Text='<%# Eval("Doctor") %>' />
+                    </td>
+                     <td>
+                        <asp:Button ID="Button1" runat="server" Text="Select" />
                     </td>
                 </tr>
             </AlternatingItemTemplate>
@@ -115,6 +118,9 @@
                     </td>
                     <td>
                         <asp:Label ID="DoctorLabel" runat="server" Text='<%# Eval("Doctor") %>' />
+                    </td>
+                    <td>
+                        <asp:Button ID="Button1" runat="server" Text="Select" />
                     </td>
                 </tr>
             </ItemTemplate>
