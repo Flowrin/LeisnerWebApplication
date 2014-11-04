@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using LeisnerWebApp.ServiceReference1;
 
 namespace LeisnerWebApp
 {
@@ -36,6 +37,16 @@ namespace LeisnerWebApp
             string kupa = label1.Text;
         }
 
-        
+        protected void btnShowInfo_Click2(object sender, EventArgs e)
+        {
+            string mail = (string) listViewPerson.SelectedDataKey.Value;
+            if (Session[mail] == null)
+            { DBAccessServiceClient dbAccess = new DBAccessServiceClient();
+             }
+            lbl.Text = mail;
+        }
+
+        //private void BindData()
+        //{listViewPerson.DataSource= }
     }
 }

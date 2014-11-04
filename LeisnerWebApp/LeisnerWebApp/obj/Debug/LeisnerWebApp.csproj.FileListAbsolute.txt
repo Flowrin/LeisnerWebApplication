@@ -29,3 +29,8 @@ C:\Users\jan\Documents\LeisnerWebApp233\LeisnerWebApp\LeisnerWebApp\bin\LeisnerW
 C:\Users\jan\Documents\LeisnerWebApp233\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.csprojResolveAssemblyReference.cache
 C:\Users\jan\Documents\LeisnerWebApp233\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.dll
 C:\Users\jan\Documents\LeisnerWebApp233\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.pdb
+C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\bin\LeisnerWebApp.dll
+C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\bin\LeisnerWebApp.pdb
+C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.csprojResolveAssemblyReference.cache
+C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.dll
+C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.pdb

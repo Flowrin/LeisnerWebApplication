@@ -28,6 +28,7 @@ namespace LeisnerWebService
         PeePee _peePee;
         Week _week;
         Day _day;
+        public string Mail { get; set; }
 
         #region PersonMethods
 

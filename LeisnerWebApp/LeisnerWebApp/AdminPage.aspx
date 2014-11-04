@@ -14,7 +14,7 @@
             <tr>
                 <td>
     
-        <asp:ListView  ID="listViewPerson" runat="server" DataSourceID="SqlDataSourcePersonList"  >
+        <asp:ListView  ID="listViewPerson" runat="server" DataSourceID="SqlDataSourcePersonList" DataKeyNames="Name"  >
             <AlternatingItemTemplate>
                 <tr style="background-color:#FFF8DC;">
                     <td>
@@ -177,7 +177,10 @@
         </table>
     
     </div>
-        <asp:Button ID="btnShowInfo" runat="server" Text="Show " />
+        <asp:Button ID="btnShowInfo" runat="server" Text="Show " OnClick="btnShowInfo_Click2" />
+        <p>
+            <asp:Label ID="lbl" runat="server" Text="Label"></asp:Label>
+        </p>
     </form>
 </body>
 </html>
