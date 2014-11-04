@@ -14,7 +14,7 @@
             <tr>
                 <td>
     
-        <asp:ListView  ID="listViewPerson" runat="server" DataSourceID="SqlDataSourcePersonList"  OnItemCommand="listViewPerson_ItemCommand" OnSelectedIndexChanged="listViewPerson_SelectedIndexChanged">
+        <asp:ListView  ID="listViewPerson" runat="server" DataSourceID="SqlDataSourcePersonList"  >
             <AlternatingItemTemplate>
                 <tr style="background-color:#FFF8DC;">
                     <td>
