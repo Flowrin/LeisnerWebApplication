@@ -73,6 +73,7 @@
     <Compile Include="Classes\Day.cs" />
     <Compile Include="Classes\PeePee.cs" />
     <Compile Include="Classes\Person.cs" />
+    <Compile Include="Classes\Stats.cs" />
     <Compile Include="Classes\Time.cs" />
     <Compile Include="Classes\Week.cs" />
     <Compile Include="DBAccessService.svc.cs">

@@ -41,8 +41,8 @@ namespace LeisnerWebService
 
             cmd.CommandText = "Select * From " + "Person" + " Where Email = @Email";
 
-            SqlParameter par = new SqlParameter("@PersonID", SqlDbType.Int);
-            par.Value = _person.PersonId;
+            SqlParameter par = new SqlParameter("@Email", SqlDbType.NVarChar);
+            par.Value = _person.Email;
             cmd.Parameters.Add(par);
             _person = new Person();
             con.Open();
@@ -53,7 +53,7 @@ namespace LeisnerWebService
             _person.ChildName = (string)datareader["ChildsName"];
             _person.DateOfBirth = (string)datareader["DateOfBirth"];
             _person.Doctor = (string)datareader["Doctor"];
-            _person.Email = (string)datareader["Email"];
+           // _person.Email = (string)datareader["Email"];
             _person.Name = (string)datareader["Name"];
             _person.Password = (string)datareader["Password"];
             _person.PersonId = (int)datareader["PersonID"];
@@ -397,6 +397,9 @@ namespace LeisnerWebService
 
             return myCommonList;
         }
+
+
+        //
         public List<Week> GetWeek(Person person)
         {
             List<Week> myWeek = new List<Week>();
@@ -444,6 +447,39 @@ namespace LeisnerWebService
                 }
             return myPeePee;
         }
+
+        public List<Stats> GetStats()
+        {
+            List<Stats> statsList = new List<Stats>();
+
+            Stats _stats = new Stats();
+
+            SqlConnection con = new SqlConnection(CONNECTION_STRING);
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+
+            cmd.CommandText = "SP_Stats";
+            con.Open();
+            SqlDataReader datareader = cmd.ExecuteReader();
+
+            while (datareader.Read())
+            {
+                _stats = new Stats();
+                _stats.Email = (string)datareader["Email"];
+                _stats.Hour = (string)datareader["Hour"];
+                _stats.Pee_size = (string)datareader["Size"];
+                _stats.Day_of_week = (string)datareader["DayName"];
+                _stats.Week_Id = (int)datareader["WeekID"];
+                statsList.Add(_stats);
+            }
+
+            con.Close();
+
+            return statsList;
+        }
+
+              
+
     }
     
 }
