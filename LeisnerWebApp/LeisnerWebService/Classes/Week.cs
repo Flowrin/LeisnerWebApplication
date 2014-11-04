@@ -10,6 +10,8 @@ namespace LeisnerWebApp.App_Code
 
         private int weekId;
         private string weekName;
+        private int dayId;
+        List<Day> _dayList;
 
 
 
@@ -25,6 +27,25 @@ namespace LeisnerWebApp.App_Code
         {
             get { return weekName; }
             set { weekName = value; }
+        }
+
+        public int DayId
+        { get { return dayId; } }
+
+        
+        
+        public void AddDay(Day myDay)
+        {
+            List<Day> _dayList = new List<Day>();
+            _dayList.Add(myDay);
+        }
+
+        public List<Day> GetAllDays()
+        {
+            if (_dayList == null)
+                throw new Exception("No peepee results were found for this person");
+
+            return _dayList;
         }
 
      

@@ -32,7 +32,7 @@ namespace LeisnerWebApp
             System.Web.UI.WebControls.Button btn = e.CommandSource as System.Web.UI.WebControls.Button;
 
             ListViewItem item = btn.NamingContainer as ListViewItem;
-          
+            
             Label label1 = item.FindControl("ChildsNameLabel") as Label;
             string kupa = label1.Text;
         }
@@ -42,8 +42,9 @@ namespace LeisnerWebApp
             string mail = (string) listViewPerson.SelectedDataKey.Value;
             if (Session[mail] == null)
             { DBAccessServiceClient dbAccess = new DBAccessServiceClient();
+              dbAccess.FindPerson(mail);
              }
-            lbl.Text = mail;
+            
         }
 
         //private void BindData()

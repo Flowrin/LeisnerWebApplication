@@ -28,18 +28,18 @@ namespace LeisnerWebService
         PeePee _peePee;
         Week _week;
         Day _day;
-        public string Mail { get; set; }
+
 
         #region PersonMethods
 
-        public void FindPerson()
+        public void FindPerson(string Email)
         {
             SqlConnection con = new SqlConnection(CONNECTION_STRING);
             SqlCommand cmd = new SqlCommand();
 
             cmd.Connection = con;
 
-            cmd.CommandText = "Select * From " + "Person" + " Where PersonID = @PersonID";
+            cmd.CommandText = "Select * From " + "Person" + " Where Email = @Email";
 
             SqlParameter par = new SqlParameter("@PersonID", SqlDbType.Int);
             par.Value = _person.PersonId;
@@ -202,7 +202,7 @@ namespace LeisnerWebService
                     con.Close();
                 }
             }
-           
+
         }
         #endregion
 
@@ -241,7 +241,7 @@ namespace LeisnerWebService
             SqlConnection con = new SqlConnection(CONNECTION_STRING);
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "Select * From " +  "PeePee" + " Where PeePeeID = @PeePeeID";
+            cmd.CommandText = "Select * From " + "PeePee" + " Where PeePeeID = @PeePeeID";
 
             SqlParameter par = new SqlParameter("@PeePeeID", SqlDbType.Int);
             par.Value = _peePee.PeePeeId;
@@ -383,13 +383,13 @@ namespace LeisnerWebService
 
             while (datareader.Read())
             {
-                
+
                 _common.DayId = (int)datareader["DaiID"];
                 _common.HourId = (int)datareader["HourID"];
                 _common.PersonId = (int)datareader["PersonID"];
                 _common.SizeId = (int)datareader["SizeID"];
                 _common.WeekId = (int)datareader["SizeID"];
-               
+
                 myCommonList.Add(_common);
             }
 
@@ -397,7 +397,58 @@ namespace LeisnerWebService
 
             return myCommonList;
         }
+        public List<Week> GetWeek(Person person)
+        {
+            List<Week> myWeek = new List<Week>();
+            foreach (Week week in person.GetAllWeeks())
+            
+                if (week.WeekId == person.WeekID)
+                {
+                    myWeek.Add(week);
+                }
+                return myWeek;
+            
         }
-        
+        public List<Day> GetDay(Week week)
+        {
+            List<Day> myDay = new List<Day>();
+            foreach (Day _day in _week.GetAllDays())
+
+                if (_day.DayId == _week.DayId)
+                {
+                    myDay.Add(_day);
+                }
+            return myDay;
+
         }
-   
+        public List<Time> GetHour(Day day)
+        {
+            List<Time> myTime = new List<Time>();
+            foreach (Time _time in _day.GetAllHours())
+
+                if (_time.HourId == _day.HourId)
+                {
+                    myTime.Add(_time);
+                }
+            return myTime;
+
+        }
+        public List<PeePee> GetPeePee(Time myTime)
+        {
+            List<PeePee> myPeePee = new List<PeePee>();
+            foreach (PeePee _peePee in myTime.GetAllPeePees())
+
+                if (_peePee.PeePeeId == _time.PeePeeId)
+                {
+                    myPeePee.Add(_peePee);
+                }
+            return myPeePee;
+        }
+    }
+    
+}
+
+
+
+
+

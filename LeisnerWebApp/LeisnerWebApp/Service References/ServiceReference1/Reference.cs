@@ -361,10 +361,10 @@ namespace LeisnerWebApp.ServiceReference1 {
     public interface IDBAccessService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/FindPerson", ReplyAction="http://tempuri.org/IDBAccessService/FindPersonResponse")]
-        void FindPerson();
+        void FindPerson(string Email);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/FindPerson", ReplyAction="http://tempuri.org/IDBAccessService/FindPersonResponse")]
-        System.Threading.Tasks.Task FindPersonAsync();
+        System.Threading.Tasks.Task FindPersonAsync(string Email);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/FindAllPersons", ReplyAction="http://tempuri.org/IDBAccessService/FindAllPersonsResponse")]
         LeisnerWebApp.ServiceReference1.Person[] FindAllPersons();
@@ -436,12 +436,12 @@ namespace LeisnerWebApp.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public void FindPerson() {
-            base.Channel.FindPerson();
+        public void FindPerson(string Email) {
+            base.Channel.FindPerson(Email);
         }
         
-        public System.Threading.Tasks.Task FindPersonAsync() {
-            return base.Channel.FindPersonAsync();
+        public System.Threading.Tasks.Task FindPersonAsync(string Email) {
+            return base.Channel.FindPersonAsync(Email);
         }
         
         public LeisnerWebApp.ServiceReference1.Person[] FindAllPersons() {

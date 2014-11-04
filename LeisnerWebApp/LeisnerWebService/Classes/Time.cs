@@ -9,6 +9,8 @@ namespace LeisnerWebApp.App_Code
     {
         private int hourId;
         private string hour;
+        private int peePeeId;
+        List<PeePee> _peePeeList;
 
 
 
@@ -27,6 +29,23 @@ namespace LeisnerWebApp.App_Code
             set { hour = value; }
         }
 
+        public int PeePeeId
+        { 
+            get{return peePeeId;}
+        }
 
+        public void AddSize(PeePee myPeepee)
+        {
+            List<PeePee> _peePeeList = new List<PeePee>();
+            _peePeeList.Add(myPeepee);
+        }
+
+        public List<PeePee> GetAllPeePees()
+        {
+            if (_peePeeList == null)
+                throw new Exception("No peepee results were found for this person");
+
+            return _peePeeList;
+        }
     }
 }

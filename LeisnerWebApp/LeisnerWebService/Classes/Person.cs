@@ -16,8 +16,11 @@ namespace LeisnerWebApp.App_Code
         private string childName;
         private string doctor;
         private string dateOfBirth;
+        private int weekID;
 
-        private List<PeePee> peepees;
+        
+
+        private List<Week> weeks;
 
 
         #region Constructors
@@ -33,7 +36,7 @@ namespace LeisnerWebApp.App_Code
             this.childName = childName;
             this.doctor = doctor;
             this.dateOfBirth = dateOfBirth;
-            this.peepees = new List<PeePee>();
+            this.weeks = new List<Week>();
         }
 
         public Person(string email, string password)
@@ -61,7 +64,11 @@ namespace LeisnerWebApp.App_Code
             set { personId = value; }
         }
 
-
+        public int WeekID
+        {
+            get { return weekID; }
+            set { weekID = value; }
+        }
         public int Status
         {
             get { return status; }
@@ -118,17 +125,17 @@ namespace LeisnerWebApp.App_Code
         }
         #endregion
 
-        public void AddPeePee(PeePee myPeePee)
+        public void AddPeePee(Week myWeek)
         {
-            peepees.Add(myPeePee);
+            weeks.Add(myWeek);
         }
 
-        public List<PeePee> GetAllPeePees()
+        public List<Week> GetAllWeeks()
         {
-            if (peepees == null)
+            if (weeks == null)
                 throw new Exception("No peepee results were found for this person");
 
-            return peepees;
+            return weeks;
         }
     }
 }

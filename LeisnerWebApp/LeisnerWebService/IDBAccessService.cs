@@ -15,7 +15,7 @@ namespace LeisnerWebService
     {
 
         [OperationContract]
-        void  FindPerson();
+        void  FindPerson(string Email);
 
         [OperationContract]
         List<Person> FindAllPersons();
@@ -32,13 +32,8 @@ namespace LeisnerWebService
         [OperationContract]
         void SaveInfo(int personId, int weekId, int hourId, int dayId, int peePeeId);
     }
-    //[DataContract]
-    //public class Person
-    //{
-    //    [DataMember]
-    //    public string email
-    //    { get; set; }
-    //}
+    
+   
 }
 
 
