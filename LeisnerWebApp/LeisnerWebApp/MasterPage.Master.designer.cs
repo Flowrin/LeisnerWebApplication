@@ -10,7 +10,7 @@
 namespace LeisnerWebApp {
     
     
-    public partial class DailyInfo {
+    public partial class MasterPage {
         
         /// <summary>
         /// Head1 control.
@@ -119,6 +119,15 @@ namespace LeisnerWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubmit;
+        
+        /// <summary>
+        /// chart1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.DataVisualization.Charting.Chart chart1;
         
         /// <summary>
         /// blaaaaaaaa control.

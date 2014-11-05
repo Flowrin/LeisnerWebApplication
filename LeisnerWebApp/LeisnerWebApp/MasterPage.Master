@@ -1,8 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DailyInfo.aspx.cs" Inherits="LeisnerWebApp.DailyInfo" %>
-
-<%@ Register assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.DataVisualization.Charting" tagprefix="asp" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="LeisnerWebApp.MasterPage" %>
 
 <!DOCTYPE html>
+
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
@@ -25,6 +24,7 @@
             height: 47px;
         }
     </style>
+         
 </head>
 <body>
 
@@ -101,10 +101,25 @@
                 <td class="auto-style7">
                     </td>
             </tr>
+            
         </table>
-       <%--     <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-    <asp:Literal ID="ltrChart" runat="server"></asp:Literal>
-</asp:Content>--%>
+        
+
+  <%--     <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
+    <asp:Literal ID="Stats_Chart" runat="server">
+    </asp:Literal>
+    </asp:Content>--%>
+
+        <asp:Chart ID="chart1" runat="server">
+                <Series>
+                    <asp:Series Name="chart1">
+                    </asp:Series>
+                </Series>
+                <ChartAreas>
+                    <asp:ChartArea Name="ChartArea1">
+                    </asp:ChartArea>
+                </ChartAreas>
+            </asp:Chart>
         <p style="background-color:gray; height: 344px;">
       
             <asp:SqlDataSource ID="blaaaaaaaa" runat="server" ConnectionString="<%$ ConnectionStrings:EJL12_DBConnectionString %>" SelectCommand="SELECT [DayID], [PeePeeID] FROM [Common]"></asp:SqlDataSource>
@@ -112,3 +127,4 @@
     </form>
 </body>
 </html>
+
