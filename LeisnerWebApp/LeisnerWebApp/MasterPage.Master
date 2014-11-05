@@ -112,7 +112,7 @@
 
         <asp:Chart ID="chart1" runat="server">
                 <Series>
-                    <asp:Series Name="chart1">
+                    <asp:Series Name="chart1" ChartType="Line">
                     </asp:Series>
                 </Series>
                 <ChartAreas>

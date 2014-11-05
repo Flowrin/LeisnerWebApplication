@@ -13,7 +13,6 @@ C:\Users\Valentina\Documents\visual studio 2012\Projects\LeisnerWebApplication\L
 C:\Users\Valentina\Documents\visual studio 2012\Projects\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.csprojResolveAssemblyReference.cache
 C:\Users\Valentina\Documents\visual studio 2012\Projects\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.dll
 C:\Users\Valentina\Documents\visual studio 2012\Projects\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.pdb
-C:\Users\Sebi\Desktop\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.csprojResolveAssemblyReference.cache
 C:\Users\Sebi\Desktop\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.dll
 C:\Users\Sebi\Desktop\LeisnerWebApp\LeisnerWebApp\bin\LeisnerWebApp.dll
 C:\Users\Sebi\Desktop\LeisnerWebApp\LeisnerWebApp\bin\LeisnerWebApp.pdb
@@ -34,3 +33,4 @@ C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerW
 C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.csprojResolveAssemblyReference.cache
 C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.dll
 C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\obj\Debug\LeisnerWebApp.pdb
+C:\Users\Sebi\Desktop\LeisnerWebApp\LeisnerWebApp\bin\DotNet.Highcharts.dll

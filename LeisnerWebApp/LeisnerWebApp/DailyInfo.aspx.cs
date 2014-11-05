@@ -6,35 +6,18 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using LeisnerWebApp.ServiceReference1;
 using System.Web.UI.DataVisualization.Charting;
-using DotNet.Highcharts;
-using System.Data.SqlClient;
-using System.Data.SqlTypes;
-using DotNet.Highcharts;
-using DotNet.Highcharts.Helpers;
-using DotNet.Highcharts.Options;
-using DotNet.Highcharts.Attributes;
-using DotNet.Highcharts.Enums;
 
 namespace LeisnerWebApp
 {
     public partial class DailyInfo : System.Web.UI.Page
     {
-        int mon = 0, tue = 0, wed = 0, thu = 0, fri = 0, sat = 0, sun = 0;
-         FrontPage fp = new FrontPage();
+        FrontPage fp = new FrontPage();
         DBAccessServiceClient dbAccess = new DBAccessServiceClient();
-        
-           DotNet.Highcharts.Highcharts chart = new DotNet.Highcharts.Highcharts("chart")
-            .SetXAxis(new XAxis
-                        {
-                            Categories = new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" }
-                        })
-               
-            .SetSeries(new Series
-                        {
-                            Data = new Data(new object[] { 29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4 })
-                        });
+        protected void Page_Load(object sender, EventArgs e)
+        {
 
-        ltrChart.Text = chart.ToHtmlString();
+        }
+
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             int weekId, dayId, sizeId, hourId, personId;
@@ -48,60 +31,86 @@ namespace LeisnerWebApp
 
         protected void btnChart_Click(object sender, EventArgs e)
         {
-            
+            Series series1 = new Series("Series1");
+            series1.ChartType = SeriesChartType.Column;
+            //Stats_Chart.Series["Series1"].IsXValueIndexed = true;
+           chartStats.Visible = true;
             Stats[] statsList;
             statsList = dbAccess.GetStats();
             string personID = fp.Email;
             int weekId = dropDownWeek.SelectedIndex + 1;
-      //      int mon = 0, tue = 0, wed = 0, thu = 0, fri = 0, sat = 0, sun = 0;
+            //this.BindData();
+            int mon = 0, tue = 0, wed = 0, thu = 0, fri = 0, sat = 0, sun = 0;
             foreach (Stats stat in statsList)
             {
                 if (stat.Email == personID && stat.Week_Id == weekId)
                 {
                     if (stat.Day_of_week == "Monday")
-                    { mon += stat.Pee_size; }
+                    {
+                        mon += stat.Pee_size;
+                        lblMondayH.Text += stat.Hour + "\r\n" + "/";
+                    }
+
                     if (stat.Day_of_week == "Tuesday")
-                    { tue += stat.Pee_size; }
+                    {
+                        tue += stat.Pee_size;
+                        lblTuesdayH.Text += stat.Hour + "\r\n" + "/";
+                    }
+
                     if (stat.Day_of_week == "Wednesday")
-                    { wed += stat.Pee_size; }
+                    {
+                        wed += stat.Pee_size;
+                        lblWednesdayH.Text += stat.Hour + "\r\n" + "/";
+                    }
+
                     if (stat.Day_of_week == "Thursday")
-                    { thu += stat.Pee_size; }
+                    {
+                        thu += stat.Pee_size;
+                        lblThurdayH.Text += stat.Hour + "\r\n" + "/";
+                    }
+
                     if (stat.Day_of_week == "Friday")
-                    { fri += stat.Pee_size; }
+                    {
+                        fri += stat.Pee_size;
+                        lblFridayH.Text += stat.Hour + "\r\n" + "/";
+                    }
+
                     if (stat.Day_of_week == "Saturday")
-                    { sat += stat.Pee_size; }
+                    {
+                        sat += stat.Pee_size;
+                        lblSaturdayH.Text += stat.Hour + "\r\n" + "/";
+                    }
+
                     if (stat.Day_of_week == "Sunday")
-                    { sun += stat.Pee_size; }
+                    {
+                        sun += stat.Pee_size;
+                        lblSundayH.Text += stat.Hour + "\r\n" + "/";
+                    }
                 }
 
             }
-       //     Response.Write("<script>alert(" + mon + tue + wed + thu + fri + sat + sun + ");</script>");
-
-
+            lblMonday.Text = mon.ToString();
+            lblTuesday.Text = tue.ToString();
+            lblWednesday.Text = wed.ToString();
+            lblThursday.Text = thu.ToString();
+            lblFriday.Text = fri.ToString();
+            lblSaturday.Text = sat.ToString();
+            lblSunday.Text = sun.ToString();
+         
+            
+            string[] seriesArray = { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
+            int[] pointsArray = { mon, tue, wed, thu, fri, sat, sun };
+            this.chartStats.Titles.Add("Statistics");
+            for (int i = 0; i < seriesArray.Length; i++)
+            {
+                // Add series.
+                Series series = this.chartStats.Series.Add(seriesArray[i]);
+                
+                // Add point.
+                series.Points.Add(pointsArray[i]);
+                series.Label = seriesArray[i];
+                
+            }
         }
-
     }
 }
-//        private void BindData()
-//        {
-
-//            Series series1 = new Series();
-//            Stats_Chart.Series.Add(series1);
-//            Stats_Chart.DataSource = dbAccess.GetStats();
-//            //series1.Points.DataBindXY(statss.Day_of_week, statss.Pee_size);
-//            // Initialize an array of ints
-//            int[] yval = { mon, tue, wed, thu, fri, sat, sun };
-
-//            // Initialize an array of strings 
-//            string[] xval = { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
-
-//            // Bind the int array to the Y axis points of the Default data series 
-//            Stats_Chart.Series["series1"].Points.DataBindXY(xval, yval);
-//        }
-
-//        protected void Stats_Chart_Load(object sender, EventArgs e)
-//        {
-//            this.BindData();
-//        }
-//    }
-//}

@@ -1,10 +1,11 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DailyInfo.aspx.cs" Inherits="LeisnerWebApp.DailyInfo" %>
 
 <%@ Register assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.DataVisualization.Charting" tagprefix="asp" %>
-
+>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head id="Head1" runat="server">
  
     <title></title>
@@ -101,13 +102,97 @@
                 <td class="auto-style7">
                     </td>
             </tr>
+
+            <tr>
+                <td>
+                    <asp:Chart ID="chartStats" runat="server" Visible="False">
+                        <Series>
+                            <asp:Series ChartType="Spline" Name="Series1" YValuesPerPoint="2">
+                            </asp:Series>
+                        </Series>
+                        <ChartAreas>
+                            <asp:ChartArea Name="ChartArea1">
+                            </asp:ChartArea>
+                        </ChartAreas>
+                    </asp:Chart>
+                </td>
+            </tr>
+
         </table>
+
        <%--     <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <asp:Literal ID="ltrChart" runat="server"></asp:Literal>
 </asp:Content>--%>
         <p style="background-color:gray; height: 344px;">
       
-            <asp:SqlDataSource ID="blaaaaaaaa" runat="server" ConnectionString="<%$ ConnectionStrings:EJL12_DBConnectionString %>" SelectCommand="SELECT [DayID], [PeePeeID] FROM [Common]"></asp:SqlDataSource>
+            <table style="width:100%;">
+                <tr>
+                    <td>Day</td>
+                    <td>Monday</td>
+                    <td>Tuesday</td>
+                    <td>Wednesday</td>
+                    <td>Thursday</td>
+                    <td>Friday</td>
+                    <td>Saturday</td>
+                    <td>Sunday</td>
+                </tr>
+                <tr>
+                    <td>Points</td>
+                    <td>
+                        <asp:Label ID="lblMonday" runat="server"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblTuesday" runat="server"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblWednesday" runat="server"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblThursday" runat="server"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblFriday" runat="server"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblSaturday" runat="server"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblSunday" runat="server"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hours</td>
+                    <td>
+                        <asp:Label ID="lblMondayH" runat="server"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblTuesdayH" runat="server"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblWednesdayH" runat="server"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblThurdayH" runat="server"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblFridayH" runat="server"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblSaturdayH" runat="server"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblSundayH" runat="server"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="8">Points are calculated with formula (Times your kid peed during the night )*(Size of pee value)<br />
+                        Extra small - 1<br />
+                        Small - 2<br />
+                        Medium - 3<br />
+                        Large - 4<br />
+                        Extra Large - 5</td>
+                </tr>
+            </table>
         </p> 
     </form>
 </body>
