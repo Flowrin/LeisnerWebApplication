@@ -36,7 +36,6 @@ namespace LeisnerWebApp
             string personID = fp.Email;
             int weekId = dropDownWeek.SelectedIndex + 1;
             int mon=0, tue=0, wed=0, thu=0, fri=0, sat=0, sun=0;
-            
             foreach (Stats stat in statsList)
             {
                 if (stat.Email == personID && stat.Week_Id == weekId)
@@ -56,7 +55,8 @@ namespace LeisnerWebApp
                     if (stat.Day_of_week == "Sunday")
                     { sun += stat.Pee_size; }
                 }
-            } Response.Write("<script>alert("+mon+tue+wed+thu+fri+sat+sun+");</script>");
+            }
+             Response.Write("<script>alert("+mon+tue+wed+thu+fri+sat+sun+");</script>");
 
 
         }
