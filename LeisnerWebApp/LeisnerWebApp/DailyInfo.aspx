@@ -105,9 +105,9 @@
 
             <tr>
                 <td>
-                    <asp:Chart ID="chartStats" runat="server" Visible="False">
+                    <asp:Chart ID="chartStats" runat="server" Visible="False"  Height="500px" Width="1150px">
                         <Series>
-                            <asp:Series ChartType="Spline" Name="Series1" YValuesPerPoint="2">
+                            <asp:Series ChartType="Line" Name="Series1" YValuesPerPoint="7">
                             </asp:Series>
                         </Series>
                         <ChartAreas>

@@ -33,8 +33,9 @@ namespace LeisnerWebApp
         {
             Series series1 = new Series("Series1");
             series1.ChartType = SeriesChartType.Column;
-            //Stats_Chart.Series["Series1"].IsXValueIndexed = true;
+            
            chartStats.Visible = true;
+           chartStats.ItemType = "Line";
             Stats[] statsList;
             statsList = dbAccess.GetStats();
             string personID = fp.Email;
