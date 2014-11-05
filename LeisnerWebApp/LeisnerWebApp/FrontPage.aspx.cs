@@ -10,7 +10,14 @@ namespace LeisnerWebApp
 {
     public partial class FrontPage : System.Web.UI.Page
     {
-       static int id;
+        static string email;
+
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
+        static int id;
 
         public int Id
         {
@@ -26,7 +33,7 @@ namespace LeisnerWebApp
 
         }
 
-  
+
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -35,8 +42,8 @@ namespace LeisnerWebApp
 
         protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
         {
-            
-           
+
+
         }
 
         protected void LoginButton_Click(object sender, EventArgs e)
@@ -50,14 +57,17 @@ namespace LeisnerWebApp
             {
                 if (person.Email == tempUser && person.Password == tempPass && person.Status == 0)
                 {
+                    Email = person.Email;
                     Id = person.PersonId;
                     Response.Redirect("DailyInfo.aspx");
                     
                 }
                 else if (person.Email == tempUser && person.Password == tempPass && person.Status == 1)
                 {
+                    Email = person.Email;
+                    Id = person.PersonId;
                     Response.Redirect("AdminPage.aspx");
-                    id = person.PersonId;
+                    
                 }
                // else FailureText.Text = "Invalid username and/or password";
 

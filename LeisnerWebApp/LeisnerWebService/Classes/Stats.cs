@@ -28,9 +28,9 @@ namespace LeisnerWebService.Classes
             get { return _hour; }
             set { _hour = value; }
         }
-        private string _pee_size;
+        private int _pee_size;
 
-        public string Pee_size
+        public int Pee_size
         {
             get { return _pee_size; }
             set { _pee_size = value; }

@@ -33,7 +33,32 @@ namespace LeisnerWebApp
             Stats_Chart.Visible = true;
             Stats[] statsList;
             statsList = dbAccess.GetStats();
-            int personID = fp.Id;
+            string personID = fp.Email;
+            int weekId = dropDownWeek.SelectedIndex + 1;
+            int mon=0, tue=0, wed=0, thu=0, fri=0, sat=0, sun=0;
+            
+            foreach (Stats stat in statsList)
+            {
+                if (stat.Email == personID && stat.Week_Id == weekId)
+                {
+                    if (stat.Day_of_week == "Monday")
+                    { mon += stat.Pee_size; }
+                    if (stat.Day_of_week == "Tuesday")
+                    { tue += stat.Pee_size; }
+                    if (stat.Day_of_week == "Wednesday")
+                    { wed += stat.Pee_size; }
+                    if (stat.Day_of_week == "Thursday")
+                    { thu += stat.Pee_size; }
+                    if (stat.Day_of_week == "Friday")
+                    { fri += stat.Pee_size; }
+                    if (stat.Day_of_week == "Saturday")
+                    { sat += stat.Pee_size; }
+                    if (stat.Day_of_week == "Sunday")
+                    { sun += stat.Pee_size; }
+                }
+            } Response.Write("<script>alert("+mon+tue+wed+thu+fri+sat+sun+");</script>");
+
+
         }
   
     }

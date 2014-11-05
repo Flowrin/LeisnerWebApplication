@@ -391,7 +391,7 @@ namespace LeisnerWebApp.ServiceReference1 {
         private string HourField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Pee_sizeField;
+        private int Pee_sizeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int Week_IdField;
@@ -446,12 +446,12 @@ namespace LeisnerWebApp.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Pee_size {
+        public int Pee_size {
             get {
                 return this.Pee_sizeField;
             }
             set {
-                if ((object.ReferenceEquals(this.Pee_sizeField, value) != true)) {
+                if ((this.Pee_sizeField.Equals(value) != true)) {
                     this.Pee_sizeField = value;
                     this.RaisePropertyChanged("Pee_size");
                 }

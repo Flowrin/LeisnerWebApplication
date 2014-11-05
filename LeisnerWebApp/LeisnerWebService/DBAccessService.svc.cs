@@ -467,7 +467,7 @@ namespace LeisnerWebService
                 _stats = new Stats();
                 _stats.Email = (string)datareader["Email"];
                 _stats.Hour = (string)datareader["Hour"];
-                _stats.Pee_size = (string)datareader["Size"];
+                _stats.Pee_size = (int)datareader["PeePeeID"];
                 _stats.Day_of_week = (string)datareader["DayName"];
                 _stats.Week_Id = (int)datareader["WeekID"];
                 statsList.Add(_stats);
