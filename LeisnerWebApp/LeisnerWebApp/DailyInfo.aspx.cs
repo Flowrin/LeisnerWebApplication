@@ -31,6 +31,9 @@ namespace LeisnerWebApp
         protected void btnChart_Click(object sender, EventArgs e)
         {
             Stats_Chart.Visible = true;
+            Stats[] statsList;
+            statsList = dbAccess.GetStats();
+            int personID = fp.Id;
         }
   
     }

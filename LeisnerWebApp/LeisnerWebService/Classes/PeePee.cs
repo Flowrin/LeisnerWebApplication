@@ -10,7 +10,7 @@ namespace LeisnerWebApp.App_Code
         private string size;
         private int peePeeId;
         private int personId;
-        private List<Person> _personList;
+        private List<Person> _personList = new List<Person>();
 
         //Properties
         public string Size
@@ -29,7 +29,7 @@ namespace LeisnerWebApp.App_Code
         public int PersonId
         { get { return personId; } }
 
-        List<Person> _personList = new List<Person>();
+        
 
     }
 }

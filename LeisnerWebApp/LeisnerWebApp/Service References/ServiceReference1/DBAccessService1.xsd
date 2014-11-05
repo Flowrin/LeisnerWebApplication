@@ -16,4 +16,20 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Common" nillable="true" type="tns:Common" />
+  <xs:complexType name="ArrayOfStats">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Stats" nillable="true" type="tns:Stats" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStats" nillable="true" type="tns:ArrayOfStats" />
+  <xs:complexType name="Stats">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Day_of_week" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hour" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pee_size" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Week_Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Stats" nillable="true" type="tns:Stats" />
 </xs:schema>

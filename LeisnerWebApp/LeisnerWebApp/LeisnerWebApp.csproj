@@ -73,6 +73,9 @@
     <Content Include="Service References\ServiceReference1\LeisnerWebApp.ServiceReference1.Person.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\ServiceReference1\LeisnerWebApp.ServiceReference1.Stats.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Service References\ServiceReference1\LeisnerWebApp.ServiceReference1.Time.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>

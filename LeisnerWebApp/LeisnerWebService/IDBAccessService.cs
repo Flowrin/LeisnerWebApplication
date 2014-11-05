@@ -31,6 +31,8 @@ namespace LeisnerWebService
         List<Common> FindInfo();
         [OperationContract]
         void SaveInfo(int personId, int weekId, int hourId, int dayId, int peePeeId);
+        [OperationContract]
+        List<Stats> GetStats();
     }
     
    
