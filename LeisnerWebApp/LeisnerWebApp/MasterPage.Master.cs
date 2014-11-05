@@ -7,6 +7,9 @@ using System.Web.UI.WebControls;
 using LeisnerWebApp.ServiceReference1;
 using System.Web.UI.DataVisualization.Charting;
 using DotNet.Highcharts;
+using DotNet.Highcharts.Helpers;
+using DotNet.Highcharts.Options;
+using DotNet.Highcharts.Attributes;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 

@@ -121,6 +121,15 @@ namespace LeisnerWebApp {
         protected global::System.Web.UI.WebControls.Button btnSubmit;
         
         /// <summary>
+        /// Stats_Chart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.DataVisualization.Charting.Chart Stats_Chart;
+        
+        /// <summary>
         /// blaaaaaaaa control.
         /// </summary>
         /// <remarks>
