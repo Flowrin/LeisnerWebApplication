@@ -103,7 +103,17 @@
         <p style="background-color:gray; height: 344px;">
             <asp:Chart ID="Stats_Chart" runat="server" DataSourceID="blaaaaaaaa" Visible="False" Width="414px">
                 <Series>
-                    <asp:Series Name="Series1" XValueMember="DayID" YValueMembers="PeePeeID">
+                    <asp:Series Name="Series1" XValueMember="DayID" YValueMembers="PeePeeID" YValueType="Int32" XValueType="Int32">
+                        <Points>
+                <asp:DataPoint AxisLabel="Monday" YValues="" />
+                <asp:DataPoint AxisLabel="Tuesday" YValues="" />
+                <asp:DataPoint AxisLabel="Wednesday" YValues="" />
+                <asp:DataPoint AxisLabel="Thursday" YValues="" />
+                <asp:DataPoint AxisLabel="Friday" YValues="" />
+                <asp:DataPoint AxisLabel="Saturday" YValues="" />
+                <asp:DataPoint AxisLabel="Sunday" YValues="" />
+               
+            </Points>
                     </asp:Series>
                 </Series>
                 <ChartAreas>

@@ -55,6 +55,7 @@ namespace LeisnerWebApp
                     if (stat.Day_of_week == "Sunday")
                     { sun += stat.Pee_size; }
                 }
+            
             }
              Response.Write("<script>alert("+mon+tue+wed+thu+fri+sat+sun+");</script>");
 
