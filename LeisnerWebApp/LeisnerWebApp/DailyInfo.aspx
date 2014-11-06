@@ -105,9 +105,9 @@
 
             <tr>
                 <td>
-                    <asp:Chart ID="chartStats" runat="server" Visible="False"  Height="500px" Width="1150px">
-                        <Series>
-                            <asp:Series ChartType="Line" Name="Series1" YValuesPerPoint="7">
+                    <asp:Chart ID="chartStats" runat="server" Visible="False" style="font-style: italic;font-family: Papyrus"  Height="500px" Width="1150px">
+                        <Series >
+                            <asp:Series ChartType="Line" Name="Week Day" YValuesPerPoint="7">
                             </asp:Series>
                         </Series>
                         <ChartAreas>
@@ -120,77 +120,69 @@
 
         </table>
 
-       <%--     <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-    <asp:Literal ID="ltrChart" runat="server"></asp:Literal>
-</asp:Content>--%>
         <p style="background-color:gray; height: 344px;">
       
-            <table style="width:100%;">
+            <table style="width:100%; background-color:white; font-style: italic;font-family: Papyrus">
                 <tr>
-                    <td>Day</td>
-                    <td>Monday</td>
-                    <td>Tuesday</td>
-                    <td>Wednesday</td>
-                    <td>Thursday</td>
-                    <td>Friday</td>
-                    <td>Saturday</td>
-                    <td>Sunday</td>
+                    <td><strong>Day</strong></td>
+                    <td style="color:#34cbb9; font-weight: 700;">Monday</td>
+                    <td style="color:#34cbb9; font-weight: 700;">Tuesday</td>
+                    <td style="color:#34cbb9; font-weight: 700;">Wednesday</td>
+                    <td style="color:#34cbb9; font-weight: 700;">Thursd<strong>a</strong>y</td>
+                    <td style="color:#34cbb9; font-weight: 700;">Friday</td>
+                    <td style="color:#34cbb9; font-weight: 700;">Saturday</td>
+                    <td style="color:#34cbb9; font-weight: 700;">Sunday</td>
                 </tr>
                 <tr>
-                    <td>Points</td>
+                    <td><strong>Points</strong></td>
                     <td>
-                        <asp:Label ID="lblMonday" runat="server"></asp:Label>
+                        <asp:Label style="color:#000; font-weight: 700;" ID="lblMonday" runat="server"></asp:Label>
                     </td>
                     <td>
-                        <asp:Label ID="lblTuesday" runat="server"></asp:Label>
+                        <asp:Label style="color:#000; font-weight: 700;" ID="lblTuesday" runat="server"></asp:Label>
                     </td>
                     <td>
-                        <asp:Label ID="lblWednesday" runat="server"></asp:Label>
+                        <asp:Label style="color:#000; font-weight: 700;" ID="lblWednesday" runat="server"></asp:Label>
                     </td>
                     <td>
-                        <asp:Label ID="lblThursday" runat="server"></asp:Label>
+                        <asp:Label style="color:#000; font-weight: 700;" ID="lblThursday" runat="server"></asp:Label>
                     </td>
                     <td>
-                        <asp:Label ID="lblFriday" runat="server"></asp:Label>
+                        <asp:Label style="color:#000; font-weight: 700;" ID="lblFriday" runat="server"></asp:Label>
                     </td>
                     <td>
-                        <asp:Label ID="lblSaturday" runat="server"></asp:Label>
+                        <asp:Label style="color:#000; font-weight: 700;" ID="lblSaturday" runat="server"></asp:Label>
                     </td>
                     <td>
-                        <asp:Label ID="lblSunday" runat="server"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Hours</td>
-                    <td>
-                        <asp:Label ID="lblMondayH" runat="server"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:Label ID="lblTuesdayH" runat="server"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:Label ID="lblWednesdayH" runat="server"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:Label ID="lblThurdayH" runat="server"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:Label ID="lblFridayH" runat="server"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:Label ID="lblSaturdayH" runat="server"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:Label ID="lblSundayH" runat="server"></asp:Label>
+                        <asp:Label style="color:#000; font-weight: 700;" ID="lblSunday" runat="server"></asp:Label>
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="8">Points are calculated with formula (Times your kid peed during the night )*(Size of pee value)<br />
-                        Extra small - 1<br />
-                        Small - 2<br />
-                        Medium - 3<br />
-                        Large - 4<br />
-                        Extra Large - 5</td>
+                    <td><strong>Hours</strong></td>
+                    <td>
+                        <asp:Label ID="lblMondayH" runat="server" style="font-weight: 700; color:#34cbb9"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblTuesdayH" runat="server" style="font-weight: 700;color:#34cbb9"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblWednesdayH" runat="server" style="font-weight: 700;color:#34cbb9"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblThurdayH" runat="server" style="font-weight: 700;color:#34cbb9"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblFridayH" runat="server" style="font-weight: 700;color:#34cbb9"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblSaturdayH" runat="server" style="font-weight: 700;color:#34cbb9"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblSundayH" runat="server" style="font-weight: 700;color:#34cbb9"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="8">&nbsp;</td>
                 </tr>
             </table>
         </p> 
