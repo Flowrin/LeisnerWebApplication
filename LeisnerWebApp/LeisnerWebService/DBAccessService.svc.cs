@@ -127,6 +127,54 @@ namespace LeisnerWebService
                 }
             }
         }
+        public void UpdatePerson(string email, string password, string name, string address, string doctor, string childsname, string dateofbirth, int status)
+        {
+            SqlConnection conn = new SqlConnection(CONNECTION_STRING);
+            SqlCommand cmd = new SqlCommand("UpdatePerson", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@Name", name);
+            cmd.Parameters.AddWithValue("@Pasword", password);
+            cmd.Parameters.AddWithValue("@Email", email);
+            cmd.Parameters.AddWithValue("@Address", address);
+            cmd.Parameters.AddWithValue("@Doctor", doctor);
+            cmd.Parameters.AddWithValue("@ChildsName", childsname);
+            cmd.Parameters.AddWithValue("@DateOfBirth", dateofbirth);
+            cmd.Parameters.AddWithValue("@Status", status);
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Customer with Email: " + email + " could not be updated!\n" + ex.Message);
+            }
+        }
+
+
+
+        public bool DeletePerson(int personId)
+        {
+            SqlConnection conn = new SqlConnection(CONNECTION_STRING);
+            SqlCommand cmd = new SqlCommand("DeletePerson", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@PersonID", personId);
+
+            try
+            {
+                int delPerson = cmd.ExecuteNonQuery();
+
+                int id = int.Parse(cmd.Parameters["@PersonID"].Value.ToString());
+                return delPerson > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Failed to delete the person records!\n" + ex.Message);
+            }
+        }
+
         #endregion
 
         #region TimeMethods
@@ -178,32 +226,7 @@ namespace LeisnerWebService
             return myTimeList;
         }
 
-        public void SaveTime(string Hour)
-        {
-            SqlConnection con = new SqlConnection(CONNECTION_STRING);
-
-            string sqlstring = ("Insert into Time ( Hour) values (@Hour)");
-            SqlCommand cmd = new SqlCommand(sqlstring, con);
-            cmd.Parameters.AddWithValue("@Hour", Hour);
-
-            try
-            {
-                con.Open();
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                if (con.State == ConnectionState.Open)
-                {
-                    con.Close();
-                }
-            }
-
-        }
+        
         #endregion
 
         #region CheckLogIn

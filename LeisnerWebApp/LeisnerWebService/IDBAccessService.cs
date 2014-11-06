@@ -33,6 +33,10 @@ namespace LeisnerWebService
         void SaveInfo(int personId, int weekId, int hourId, int dayId, int peePeeId);
         [OperationContract]
         List<Stats> GetStats();
+        [OperationContract]
+        void UpdatePerson(string email, string password, string name, string address, string doctor, string childsname, string dateofbirth, int status);
+        [OperationContract]
+        bool DeletePerson(int personId);
     }
     
    
