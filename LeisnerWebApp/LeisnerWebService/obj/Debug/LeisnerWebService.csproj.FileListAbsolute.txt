@@ -8,11 +8,6 @@ C:\Users\flori_000\Documents\GitHub\Leisner\LeisnerWebApp\LeisnerWebService\bin\
 C:\Users\flori_000\Documents\GitHub\Leisner\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.csprojResolveAssemblyReference.cache
 C:\Users\flori_000\Documents\GitHub\Leisner\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.dll
 C:\Users\flori_000\Documents\GitHub\Leisner\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.pdb
-C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\bin\LeisnerWebService.dll
-C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\bin\LeisnerWebService.pdb
-C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.csprojResolveAssemblyReference.cache
-C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.dll
-C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.pdb
 C:\Users\Sebi\Desktop\LeisnerWebApp\LeisnerWebService\bin\LeisnerWebService.dll
 C:\Users\Sebi\Desktop\LeisnerWebApp\LeisnerWebService\bin\LeisnerWebService.pdb
 C:\Users\Sebi\Desktop\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.csprojResolveAssemblyReference.cache
@@ -23,3 +18,7 @@ C:\Users\Sebi\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebSer
 C:\Users\Sebi\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.csprojResolveAssemblyReference.cache
 C:\Users\Sebi\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.dll
 C:\Users\Sebi\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.pdb
+C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\bin\LeisnerWebService.dll
+C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\bin\LeisnerWebService.pdb
+C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.dll
+C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.pdb

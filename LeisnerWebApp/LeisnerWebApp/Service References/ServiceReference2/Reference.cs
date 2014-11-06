@@ -538,6 +538,18 @@ namespace LeisnerWebApp.ServiceReference2 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/GetStats", ReplyAction="http://tempuri.org/IDBAccessService/GetStatsResponse")]
         System.Threading.Tasks.Task<LeisnerWebApp.ServiceReference2.Stats[]> GetStatsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/UpdatePerson", ReplyAction="http://tempuri.org/IDBAccessService/UpdatePersonResponse")]
+        void UpdatePerson(string email, string password, string name, string address, string doctor, string childsname, string dateofbirth, int status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/UpdatePerson", ReplyAction="http://tempuri.org/IDBAccessService/UpdatePersonResponse")]
+        System.Threading.Tasks.Task UpdatePersonAsync(string email, string password, string name, string address, string doctor, string childsname, string dateofbirth, int status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/DeletePerson", ReplyAction="http://tempuri.org/IDBAccessService/DeletePersonResponse")]
+        bool DeletePerson(int personId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDBAccessService/DeletePerson", ReplyAction="http://tempuri.org/IDBAccessService/DeletePersonResponse")]
+        System.Threading.Tasks.Task<bool> DeletePersonAsync(int personId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -637,6 +649,22 @@ namespace LeisnerWebApp.ServiceReference2 {
         
         public System.Threading.Tasks.Task<LeisnerWebApp.ServiceReference2.Stats[]> GetStatsAsync() {
             return base.Channel.GetStatsAsync();
+        }
+        
+        public void UpdatePerson(string email, string password, string name, string address, string doctor, string childsname, string dateofbirth, int status) {
+            base.Channel.UpdatePerson(email, password, name, address, doctor, childsname, dateofbirth, status);
+        }
+        
+        public System.Threading.Tasks.Task UpdatePersonAsync(string email, string password, string name, string address, string doctor, string childsname, string dateofbirth, int status) {
+            return base.Channel.UpdatePersonAsync(email, password, name, address, doctor, childsname, dateofbirth, status);
+        }
+        
+        public bool DeletePerson(int personId) {
+            return base.Channel.DeletePerson(personId);
+        }
+        
+        public System.Threading.Tasks.Task<bool> DeletePersonAsync(int personId) {
+            return base.Channel.DeletePersonAsync(personId);
         }
     }
 }

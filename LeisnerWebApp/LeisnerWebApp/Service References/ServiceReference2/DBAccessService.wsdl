@@ -62,6 +62,18 @@
   <wsdl:message name="IDBAccessService_GetStats_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetStatsResponse" />
   </wsdl:message>
+  <wsdl:message name="IDBAccessService_UpdatePerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePerson" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_UpdatePerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_DeletePerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePerson" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_DeletePerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePersonResponse" />
+  </wsdl:message>
   <wsdl:portType name="IDBAccessService">
     <wsdl:operation name="FindPerson">
       <wsdl:input wsaw:Action="http://tempuri.org/IDBAccessService/FindPerson" message="tns:IDBAccessService_FindPerson_InputMessage" />
@@ -98,6 +110,14 @@
     <wsdl:operation name="GetStats">
       <wsdl:input wsaw:Action="http://tempuri.org/IDBAccessService/GetStats" message="tns:IDBAccessService_GetStats_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IDBAccessService/GetStatsResponse" message="tns:IDBAccessService_GetStats_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBAccessService/UpdatePerson" message="tns:IDBAccessService_UpdatePerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBAccessService/UpdatePersonResponse" message="tns:IDBAccessService_UpdatePerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBAccessService/DeletePerson" message="tns:IDBAccessService_DeletePerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBAccessService/DeletePersonResponse" message="tns:IDBAccessService_DeletePerson_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IDBAccessService" type="tns:IDBAccessService">
@@ -176,6 +196,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetStats">
       <soap:operation soapAction="http://tempuri.org/IDBAccessService/GetStats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePerson">
+      <soap:operation soapAction="http://tempuri.org/IDBAccessService/UpdatePerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePerson">
+      <soap:operation soapAction="http://tempuri.org/IDBAccessService/DeletePerson" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

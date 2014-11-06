@@ -36,3 +36,4 @@ C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerW
 C:\Users\Sebi\Desktop\LeisnerWebApp\LeisnerWebApp\bin\DotNet.Highcharts.dll
 C:\Users\Sebi\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\bin\DotNet.Highcharts.dll
 C:\Users\Valentina\Documents\Visual Studio 2012\Projects\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\bin\DotNet.Highcharts.dll
+C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebApp\bin\DotNet.Highcharts.dll
