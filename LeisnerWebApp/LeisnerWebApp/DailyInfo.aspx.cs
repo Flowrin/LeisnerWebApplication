@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using LeisnerWebApp.ServiceReference1;
+using LeisnerWebApp.ServiceReference2;
 using System.Web.UI.DataVisualization.Charting;
 
 namespace LeisnerWebApp
