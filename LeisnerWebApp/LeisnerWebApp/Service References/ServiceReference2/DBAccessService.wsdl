@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DBAccessService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:11818/DBAccessService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:11818/DBAccessService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:11818/DBAccessService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LeisnerWebApp.App_Code" />
+      <xsd:import schemaLocation="http://localhost:11818/DBAccessService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LeisnerWebService.Classes" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDBAccessService_FindPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPerson" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_FindPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_FindAllPersons_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllPersons" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_FindAllPersons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllPersonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_FindTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindTime" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_FindTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_FindAllTimes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllTimes" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_FindAllTimes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllTimesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_SavePerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePerson" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_SavePerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_SaveHour_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveHour" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_SaveHour_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveHourResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_FindInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindInfo" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_FindInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_SaveInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveInfo" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_SaveInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_GetStats_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStats" />
+  </wsdl:message>
+  <wsdl:message name="IDBAccessService_GetStats_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDBAccessService">
+    <wsdl:operation name="FindPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBAccessService/FindPerson" message="tns:IDBAccessService_FindPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBAccessService/FindPersonResponse" message="tns:IDBAccessService_FindPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAllPersons">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBAccessService/FindAllPersons" message="tns:IDBAccessService_FindAllPersons_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBAccessService/FindAllPersonsResponse" message="tns:IDBAccessService_FindAllPersons_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBAccessService/FindTime" message="tns:IDBAccessService_FindTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBAccessService/FindTimeResponse" message="tns:IDBAccessService_FindTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAllTimes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBAccessService/FindAllTimes" message="tns:IDBAccessService_FindAllTimes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBAccessService/FindAllTimesResponse" message="tns:IDBAccessService_FindAllTimes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBAccessService/SavePerson" message="tns:IDBAccessService_SavePerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBAccessService/SavePersonResponse" message="tns:IDBAccessService_SavePerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveHour">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBAccessService/SaveHour" message="tns:IDBAccessService_SaveHour_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBAccessService/SaveHourResponse" message="tns:IDBAccessService_SaveHour_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBAccessService/FindInfo" message="tns:IDBAccessService_FindInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBAccessService/FindInfoResponse" message="tns:IDBAccessService_FindInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBAccessService/SaveInfo" message="tns:IDBAccessService_SaveInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBAccessService/SaveInfoResponse" message="tns:IDBAccessService_SaveInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStats">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBAccessService/GetStats" message="tns:IDBAccessService_GetStats_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBAccessService/GetStatsResponse" message="tns:IDBAccessService_GetStats_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDBAccessService" type="tns:IDBAccessService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FindPerson">
+      <soap:operation soapAction="http://tempuri.org/IDBAccessService/FindPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAllPersons">
+      <soap:operation soapAction="http://tempuri.org/IDBAccessService/FindAllPersons" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindTime">
+      <soap:operation soapAction="http://tempuri.org/IDBAccessService/FindTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAllTimes">
+      <soap:operation soapAction="http://tempuri.org/IDBAccessService/FindAllTimes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePerson">
+      <soap:operation soapAction="http://tempuri.org/IDBAccessService/SavePerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveHour">
+      <soap:operation soapAction="http://tempuri.org/IDBAccessService/SaveHour" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindInfo">
+      <soap:operation soapAction="http://tempuri.org/IDBAccessService/FindInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveInfo">
+      <soap:operation soapAction="http://tempuri.org/IDBAccessService/SaveInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStats">
+      <soap:operation soapAction="http://tempuri.org/IDBAccessService/GetStats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DBAccessService">
+    <wsdl:port name="BasicHttpBinding_IDBAccessService" binding="tns:BasicHttpBinding_IDBAccessService">
+      <soap:address location="http://localhost:11818/DBAccessService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
