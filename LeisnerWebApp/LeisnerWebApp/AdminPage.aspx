@@ -197,7 +197,7 @@
                     <asp:Button ID="Button12" runat="server" OnClick="Button12_Click1" Text="Create new user" />
                 </td>
                 <td class="auto-style2">
-                    <asp:Button ID="UpdateUser" runat="server" style="margin-left: 0px" Text="Update user" />
+                    <asp:Button ID="UpdateUser" runat="server" style="margin-left: 0px" Text="Update user" OnClick="UpdateUser_Click" />
                 </td>
                 <td>
                     <asp:Button ID="DeleteUser" runat="server" style="margin-bottom: 1px" Text="Delete user" />

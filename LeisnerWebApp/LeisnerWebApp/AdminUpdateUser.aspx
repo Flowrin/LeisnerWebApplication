@@ -43,9 +43,7 @@
                     <asp:Label ID="Label2" runat="server" Text="Select User"></asp:Label>
                 </td>
                 <td class="auto-style15">
-                    <asp:DropDownList ID="DropDownList1" runat="server" style="height: 22px">
-                    </asp:DropDownList>
-                </td>
+                    &nbsp;</td>
                 <td class="auto-style16">
                     &nbsp;</td>
             </tr>
