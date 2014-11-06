@@ -5,11 +5,15 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using LeisnerWebApp.ServiceReference2;
+using System.Web.UI.DataVisualization.Charting;
 
 namespace LeisnerWebApp
 {
     public partial class AdminPage : System.Web.UI.Page
     {
+
+        DBAccessServiceClient dbAccess = new DBAccessServiceClient();
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -17,37 +21,125 @@ namespace LeisnerWebApp
 
         protected void btnShowInfo_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         protected void btnShowInfo_Click1(object sender, EventArgs e)
         {
-          //  lblVal.Text = listViewPerson.SelectedIndex.ToString();
+
         }
 
-      
 
-        protected void listViewPerson_ItemCommand(object sender, ListViewCommandEventArgs e)
-        {
-            System.Web.UI.WebControls.Button btn = e.CommandSource as System.Web.UI.WebControls.Button;
 
-            ListViewItem item = btn.NamingContainer as ListViewItem;
-            
-            Label label1 = item.FindControl("ChildsNameLabel") as Label;
-            string kupa = label1.Text;
-        }
+
 
         protected void btnShowInfo_Click2(object sender, EventArgs e)
         {
-            string mail = (string) listViewPerson.SelectedDataKey.Value;
+            string mail = (string)listViewPerson.SelectedDataKey.Value;
             if (Session[mail] == null)
-            { DBAccessServiceClient dbAccess = new DBAccessServiceClient();
-              dbAccess.FindPerson(mail);
-             }
-            
+            {
+                DBAccessServiceClient dbAccess = new DBAccessServiceClient();
+                dbAccess.FindPerson(mail);
+            }
+
         }
 
-        //private void BindData()
-        //{listViewPerson.DataSource= }
+
+        protected void Button12_Click1(object sender, EventArgs e)
+        {
+            Response.Redirect("AdminCreateUser.aspx");
+        }
+
+        protected void DisplayChart_Click(object sender, EventArgs e)
+        {
+            Series series1 = new Series("Series1");
+            series1.ChartType = SeriesChartType.Column;
+            string personID = "";
+            chartStats.Visible = true;
+            chartStats.ItemType = "Line";
+            Stats[] statsList;
+            statsList = dbAccess.GetStats();
+            foreach (Person person in dbAccess.FindAllPersons())
+            {
+                if (ddlName.SelectedValue == person.Name)
+                { personID = person.Email; }
+            }
+
+            int weekId = ddlWeek.SelectedIndex + 1;
+
+            int mon = 0, tue = 0, wed = 0, thu = 0, fri = 0, sat = 0, sun = 0;
+            foreach (Stats stat in statsList)
+            {
+                if (stat.Email == personID && stat.Week_Id == weekId)
+                {
+                    if (stat.Day_of_week == "Monday")
+                    {
+                        mon += stat.Pee_size;
+                        lblMondayH.Text += stat.Hour + "\r\n" + "/";
+                    }
+
+                    if (stat.Day_of_week == "Tuesday")
+                    {
+                        tue += stat.Pee_size;
+                        lblTuesdayH.Text += stat.Hour + "\r\n" + "/";
+                    }
+
+                    if (stat.Day_of_week == "Wednesday")
+                    {
+                        wed += stat.Pee_size;
+                        lblWednesdayH.Text += stat.Hour + "\r\n" + "/";
+                    }
+
+                    if (stat.Day_of_week == "Thursday")
+                    {
+                        thu += stat.Pee_size;
+                        lblThurdayH.Text += stat.Hour + "\r\n" + "/";
+                    }
+
+                    if (stat.Day_of_week == "Friday")
+                    {
+                        fri += stat.Pee_size;
+                        lblFridayH.Text += stat.Hour + "\r\n" + "/";
+                    }
+
+                    if (stat.Day_of_week == "Saturday")
+                    {
+                        sat += stat.Pee_size;
+                        lblSaturdayH.Text += stat.Hour + "\r\n" + "/";
+                    }
+
+                    if (stat.Day_of_week == "Sunday")
+                    {
+                        sun += stat.Pee_size;
+                        lblSundayH.Text += stat.Hour + "\r\n" + "/";
+                    }
+                }
+
+            }
+            lblMonday.Text = mon.ToString();
+            lblTuesday.Text = tue.ToString();
+            lblWednesday.Text = wed.ToString();
+            lblThursday.Text = thu.ToString();
+            lblFriday.Text = fri.ToString();
+            lblSaturday.Text = sat.ToString();
+            lblSunday.Text = sun.ToString();
+
+
+            string[] seriesArray = { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
+            int[] pointsArray = { mon, tue, wed, thu, fri, sat, sun };
+            this.chartStats.Titles.Add("Statistics");
+            for (int i = 0; i < seriesArray.Length; i++)
+            {
+                // Add series.
+                Series series = this.chartStats.Series.Add(seriesArray[i]);
+
+                // Add point.
+                series.Points.Add(pointsArray[i]);
+                series.Label = seriesArray[i];
+
+            }
+        }
     }
+
+
 }
