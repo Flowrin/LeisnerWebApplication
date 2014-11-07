@@ -14,20 +14,21 @@ namespace LeisnerWebApp
 
         DBAccessServiceClient dbAccess = new DBAccessServiceClient();
 
+        static string name;
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void btnShowInfo_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        protected void btnShowInfo_Click1(object sender, EventArgs e)
-        {
-
-        }
 
 
 
@@ -139,7 +140,31 @@ namespace LeisnerWebApp
 
             }
         }
+
+        protected void UpdateUser_Click(object sender, EventArgs e)
+        {
+            name = listViewPerson.SelectedDataKey.Value.ToString();
+            Response.Redirect("AdminUpdateUser.aspx");
+
+        }
+
+       
+
+        protected void DeleteUser_Click1(object sender, EventArgs e)
+        {
+            name = listViewPerson.SelectedDataKey.Value.ToString();
+
+            foreach (Person person in dbAccess.FindAllPersons())
+            {
+                if (name == person.Name)
+                {
+                    dbAccess.DeletePerson(person.PersonId);
+                    Response.Write("<script>alert(" + name + "'has been deleted');</script>");
+                }
+            }
+        }
     }
-
-
 }
+
+
+

@@ -53,7 +53,7 @@ namespace LeisnerWebService
             _person.ChildName = (string)datareader["ChildsName"];
             _person.DateOfBirth = (string)datareader["DateOfBirth"];
             _person.Doctor = (string)datareader["Doctor"];
-           // _person.Email = (string)datareader["Email"];
+            // _person.Email = (string)datareader["Email"];
             _person.Name = (string)datareader["Name"];
             _person.Password = (string)datareader["Password"];
             _person.PersonId = (int)datareader["PersonID"];
@@ -129,12 +129,12 @@ namespace LeisnerWebService
         }
         public void UpdatePerson(string email, string password, string name, string address, string doctor, string childsname, string dateofbirth, int status)
         {
-            SqlConnection conn = new SqlConnection(CONNECTION_STRING);
-            SqlCommand cmd = new SqlCommand("UpdatePerson", conn);
+            SqlConnection con = new SqlConnection(CONNECTION_STRING);
+            SqlCommand cmd = new SqlCommand("UpdatePerson1", con);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.AddWithValue("@Name", name);
-            cmd.Parameters.AddWithValue("@Pasword", password);
+            cmd.Parameters.AddWithValue("@Password", password);
             cmd.Parameters.AddWithValue("@Email", email);
             cmd.Parameters.AddWithValue("@Address", address);
             cmd.Parameters.AddWithValue("@Doctor", doctor);
@@ -144,6 +144,7 @@ namespace LeisnerWebService
 
             try
             {
+                con.Open();
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -156,14 +157,15 @@ namespace LeisnerWebService
 
         public bool DeletePerson(int personId)
         {
-            SqlConnection conn = new SqlConnection(CONNECTION_STRING);
-            SqlCommand cmd = new SqlCommand("DeletePerson", conn);
+            SqlConnection con = new SqlConnection(CONNECTION_STRING);
+            SqlCommand cmd = new SqlCommand("DeletePerson", con);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.AddWithValue("@PersonID", personId);
 
             try
             {
+                con.Open();
                 int delPerson = cmd.ExecuteNonQuery();
 
                 int id = int.Parse(cmd.Parameters["@PersonID"].Value.ToString());
@@ -226,7 +228,7 @@ namespace LeisnerWebService
             return myTimeList;
         }
 
-        
+
         #endregion
 
         #region CheckLogIn
@@ -427,13 +429,13 @@ namespace LeisnerWebService
         {
             List<Week> myWeek = new List<Week>();
             foreach (Week week in person.GetAllWeeks())
-            
+
                 if (week.WeekId == person.WeekID)
                 {
                     myWeek.Add(week);
                 }
-                return myWeek;
-            
+            return myWeek;
+
         }
         public List<Day> GetDay(Week week)
         {
@@ -501,10 +503,10 @@ namespace LeisnerWebService
             return statsList;
         }
 
-              
+
 
     }
-    
+
 }
 
 

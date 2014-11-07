@@ -200,7 +200,7 @@
                     <asp:Button ID="UpdateUser" runat="server" style="margin-left: 0px" Text="Update user" OnClick="UpdateUser_Click" />
                 </td>
                 <td>
-                    <asp:Button ID="DeleteUser" runat="server" style="margin-bottom: 1px" Text="Delete user" />
+                    <asp:Button ID="DeleteUser" runat="server" style="margin-bottom: 1px" Text="Delete user" OnClick="DeleteUser_Click1" />
                 </td>
             </tr>
             <tr>
