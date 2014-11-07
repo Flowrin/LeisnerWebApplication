@@ -64,14 +64,14 @@
             <tr>
                 <td class="auto-style17" style="font-weight: 700; font-style: italic;font-family: Papyrus">Password</td>
                 <td class="auto-style15">
-                    <asp:TextBox ID="txtPass" runat="server" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="txtPass" runat="server"></asp:TextBox>
                 </td>
                 <td class="auto-style16"></td>
             </tr>
             <tr>
                 <td class="auto-style17" style="font-weight: 700; font-style: italic;font-family: Papyrus">Confirm Password</td>
                 <td class="auto-style15">
-                    <asp:TextBox ID="txtConfirmPass" runat="server" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="txtConfirmPass" runat="server"></asp:TextBox>
                 </td>
                 <td class="auto-style16"></td>
             </tr>
@@ -113,9 +113,8 @@
                 </td>
                 <td class="auto-style15">
                     <asp:DropDownList ID="ddlType" runat="server" >
-                        <asp:ListItem Value="0">Select a user Type</asp:ListItem>
-                        <asp:ListItem Value="1">Admin</asp:ListItem>
                         <asp:ListItem Value="0">User</asp:ListItem>
+                        <asp:ListItem Value="1">Admin</asp:ListItem>
                         <asp:ListItem Value="1">Employee</asp:ListItem>
                     </asp:DropDownList>
                 </td>

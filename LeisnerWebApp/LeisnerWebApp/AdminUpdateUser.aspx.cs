@@ -57,7 +57,7 @@ namespace LeisnerWebApp
             if (password == confirmpass)
             {
                 dbAccess1.UpdatePerson(email, password, name, address, doctor, childsName, dateOfBirth, int.Parse(ddlType.SelectedValue));
-                Response.Redirect("FrontPage.aspx");
+                Response.Redirect("AdminPage.aspx");
             }
         }
 

@@ -22,3 +22,4 @@ C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerW
 C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\bin\LeisnerWebService.pdb
 C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.dll
 C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.pdb
+C:\Users\flori_000\Documents\GitHub\LeisnerWebApplication\LeisnerWebApp\LeisnerWebService\obj\Debug\LeisnerWebService.csprojResolveAssemblyReference.cache
