@@ -221,18 +221,6 @@
             </tr>
             <tr>
                 <td class="auto-style3">
-                    <asp:Label ID="Label2" runat="server" Text="User Name"></asp:Label>
-                </td>
-                <td class="auto-style2">
-                    <asp:DropDownList ID="ddlName" runat="server" DataSourceID="SqlDataSourceUserName" DataTextField="Name" DataValueField="Name">
-                    </asp:DropDownList>
-                </td>
-                <td>
-                    <asp:SqlDataSource ID="SqlDataSourceUserName" runat="server" ConnectionString="<%$ ConnectionStrings:EJL12_DBConnectionString %>" SelectCommand="SELECT [Name] FROM [Person]"></asp:SqlDataSource>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style3">
                     <asp:Label ID="Label3" runat="server" Text="Week"></asp:Label>
                 </td>
                 <td class="auto-style2">

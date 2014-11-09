@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminUpdateUser.aspx.cs" Inherits="LeisnerWebApp.AdminUpdateUser" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserUpdateProfile.aspx.cs" Inherits="LeisnerWebApp.UserUpdateProfile" %>
 
 <!DOCTYPE html>
 
@@ -124,7 +124,7 @@
             <tr>
                 <td class="auto-style17"></td>
                 <td class="auto-style15">
-        <asp:Button ID="Button1" runat="server" Text="Submit" style="font-weight: 700; font-style: italic;font-family: Papyrus; " Width="111px" OnClick="Button1_Click1"/> 
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit" style="font-weight: 700; font-style: italic;font-family: Papyrus; " Width="111px" OnClick="Button1_Click1"/> 
                 </td>
                 <td class="auto-style16"></td>
             </tr>

@@ -1,5 +1,4 @@
-﻿</body>
-</html>
+﻿
  <%@ Page Language="C#" AutoEventWireup="true"CodeBehind="SignUp.aspx.cs" Inherits="LeisnerWebApp.FrontPage2" %>
 
 <!DOCTYPE html>

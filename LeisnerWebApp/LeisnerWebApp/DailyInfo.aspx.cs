@@ -33,9 +33,9 @@ namespace LeisnerWebApp
         {
             Series series1 = new Series("Series1");
             series1.ChartType = SeriesChartType.Column;
-            
-           chartStats.Visible = true;
-           chartStats.ItemType = "Line";
+
+            chartStats.Visible = true;
+            chartStats.ItemType = "Line";
             Stats[] statsList;
             statsList = dbAccess.GetStats();
             string personID = fp.Email;
@@ -99,12 +99,12 @@ namespace LeisnerWebApp
             lblSunday.Text = sun.ToString();
 
             chartStats.Legends.Add(new Legend("Week Day") { Docking = Docking.Right });
-            chartStats.Legends.Add(new Legend("Amount") {Docking=Docking.Right});
-            
-            
+            chartStats.Legends.Add(new Legend("Amount") { Docking = Docking.Right });
+
+
             string[] seriesArray = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
-            string[] amountArray = {"1 - extra small","2 - small", "3 - medium", "4 - large", "5 - extra large"};
-            
+            string[] amountArray = { "1 - extra small", "2 - small", "3 - medium", "4 - large", "5 - extra large" };
+
 
             int[] pointsArray = { mon, tue, wed, thu, fri, sat, sun };
             this.chartStats.Titles.Add("Statistics");
@@ -112,17 +112,22 @@ namespace LeisnerWebApp
             {
                 // Add series.
                 Series series = this.chartStats.Series.Add(seriesArray[i]);
-                
+
                 // Add point.
                 series.Points.Add(pointsArray[i]);
                 series.Label = seriesArray[i];
             }
-            for(int i=0;i<amountArray.Length;i++)
+            for (int i = 0; i < amountArray.Length; i++)
             {
-            Series amount = this.chartStats.Series.Add(amountArray[i]);
-             
+                Series amount = this.chartStats.Series.Add(amountArray[i]);
+
             }
         }
-            }
+
+        protected void btnUpdateProfile_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UserUpdateProfile.aspx");
         }
-    
+    }
+}
+

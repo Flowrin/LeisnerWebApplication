@@ -94,8 +94,11 @@
                 <td class="auto-style9" >
                     <asp:Button ID="btnChart" runat="server" OnClick="btnChart_Click" Text="Display Chart"  style="font-style: italic;font-family: Papyrus; font-weight: 700;"/>
                 </td>
-                <td class="auto-style7">
+                <td>
                     <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit"  style="font-style: italic;font-family: Papyrus; font-weight: 700;" Width="150px" />
+                </td>
+                <td class="auto-style7">
+                    <asp:Button ID="btnUpdateProfile" runat="server" Text="Update Profile"  style="font-style: italic;font-family: Papyrus; font-weight: 700;" Width="150px" OnClick="btnUpdateProfile_Click"  />
                 </td>
                 <td class="auto-style7">
                     </td>

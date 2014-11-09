@@ -53,6 +53,7 @@ namespace LeisnerWebApp
 
         protected void DisplayChart_Click(object sender, EventArgs e)
         {
+            string mail = (string)listViewPerson.SelectedDataKey.Value;
             Series series1 = new Series("Series1");
             series1.ChartType = SeriesChartType.Column;
             string personID = "";
@@ -62,7 +63,7 @@ namespace LeisnerWebApp
             statsList = dbAccess.GetStats();
             foreach (Person person in dbAccess.FindAllPersons())
             {
-                if (ddlName.SelectedValue == person.Name)
+                if (mail == person.Name)
                 { personID = person.Email; }
             }
 
