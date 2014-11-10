@@ -36,7 +36,7 @@
             <div style="background-color:gray">
                   <a href="http://leisner.dk/"><img alt="" class="auto-style2" src="Images/logo.png" /> </a>
 
-            <h1 style="background-color:#34cbb9; color:white; text-align: center;">Update User</h1>
+           <h1 style="background-color:#34cbb9; color:white"><span style="margin-left: 280px;font-family: Papyrus"><em>Update user</em></span></h1>
         <table class="auto-style1" style="background-color:#fff">
             <tr>
                 <td class="auto-style17"style="font-weight: 700; font-style: italic;font-family: Papyrus">

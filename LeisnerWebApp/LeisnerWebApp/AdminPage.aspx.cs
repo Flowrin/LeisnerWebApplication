@@ -126,8 +126,12 @@ namespace LeisnerWebApp
             lblSaturday.Text = sat.ToString();
             lblSunday.Text = sun.ToString();
 
+            chartStats.Legends.Add(new Legend("Week Day") { Docking = Docking.Right });
+            chartStats.Legends.Add(new Legend("Amount") { Docking = Docking.Right });
 
             string[] seriesArray = { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
+            string[] amountArray = { "1 - extra small", "2 - small", "3 - medium", "4 - large", "5 - extra large" };
+
             int[] pointsArray = { mon, tue, wed, thu, fri, sat, sun };
             this.chartStats.Titles.Add("Statistics");
             for (int i = 0; i < seriesArray.Length; i++)
@@ -138,6 +142,11 @@ namespace LeisnerWebApp
                 // Add point.
                 series.Points.Add(pointsArray[i]);
                 series.Label = seriesArray[i];
+
+            }
+            for (int i = 0; i < amountArray.Length; i++)
+            {
+                Series amount = this.chartStats.Series.Add(amountArray[i]);
 
             }
         }
